@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ModelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ColorLabel;
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
@@ -67,6 +68,20 @@
     return _imageView;
 }
 
+-(void)changeLabelColor{
+//    static BOOL seeded = NO;
+//    if (!seeded){
+//        seeded = YES;
+//        time(NULL);
+//    }
+    
+    CGFloat red = (CGFloat)random()/(CGFloat)RAND_MAX;
+    CGFloat green = (CGFloat)random()/(CGFloat)RAND_MAX;
+    CGFloat blue = (CGFloat)random()/(CGFloat)RAND_MAX;
+    
+    [_ColorLabel setTextColor:[UIColor colorWithRed:red green:green blue:blue alpha:1]];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,6 +102,13 @@
     self.ModelLabel.text = modelName;
     self.MakeLabel.text = MakeName;
     self.PriceLabel.text = Price;
+//    [self changeLabelColor];
+//    [_ColorLabel setTextColor:[UIColor redColor]];
+//    NSTimer *timer = NSTimer sche
+    //timer
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeLabelColor) userInfo:nil repeats:(YES)];
+    
+    [timer fire];
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

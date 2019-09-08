@@ -24,28 +24,28 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FmO-DD-RPK">
                                 <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scorll down the image to view more images ⬆️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvS-Oi-i52">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scorll down the image to view more images ⬆️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvS-Oi-i52">
                                 <rect key="frame" x="0.0" y="215" width="375" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ZdC-Hs-zhx">
-                                <rect key="frame" x="46" y="257" width="283" height="103.5"/>
+                                <rect key="frame" x="46" y="243" width="283" height="103.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jac-hv-Ydh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jac-hv-Ydh">
                                         <rect key="frame" x="0.0" y="0.0" width="52.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP9-hj-h1N">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP9-hj-h1N">
                                         <rect key="frame" x="0.0" y="41.5" width="46" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-bM-fKF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-bM-fKF">
                                         <rect key="frame" x="0.0" y="83" width="43.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -53,22 +53,41 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to financing this car? Try this EMP caculator ⬇️ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhv-yT-4cd">
+                                <rect key="frame" x="0.0" y="357" width="375" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimate Monthly Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhB-Qq-Qrr">
+                                <rect key="frame" x="20" y="384" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93195459897142985" green="0.93195459897142985" blue="0.93195459897142985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IvS-Oi-i52" secondAttribute="trailing" id="0lc-pg-bdp"/>
-                            <constraint firstItem="ZdC-Hs-zhx" firstAttribute="top" secondItem="IvS-Oi-i52" secondAttribute="bottom" constant="21.5" id="9gf-eD-8v3"/>
+                            <constraint firstItem="ZdC-Hs-zhx" firstAttribute="top" secondItem="IvS-Oi-i52" secondAttribute="bottom" constant="7.5" id="9gf-eD-8v3"/>
+                            <constraint firstAttribute="trailing" secondItem="vhB-Qq-Qrr" secondAttribute="trailing" constant="20" id="ACn-kN-Gv6"/>
                             <constraint firstItem="ZdC-Hs-zhx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="BCg-mL-ECF"/>
                             <constraint firstItem="FmO-DD-RPK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="C6X-2I-ggB"/>
+                            <constraint firstItem="zhv-yT-4cd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="EKR-gM-M6n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZdC-Hs-zhx" secondAttribute="trailing" constant="30" id="EWh-zO-6dy"/>
                             <constraint firstItem="FmO-DD-RPK" firstAttribute="trailing" secondItem="IvS-Oi-i52" secondAttribute="trailing" id="MhW-xb-JUl"/>
+                            <constraint firstItem="zhv-yT-4cd" firstAttribute="top" secondItem="ZdC-Hs-zhx" secondAttribute="bottom" constant="10.5" id="N4e-NZ-2zq"/>
                             <constraint firstItem="IvS-Oi-i52" firstAttribute="top" secondItem="FmO-DD-RPK" secondAttribute="bottom" constant="1" id="RKg-J8-AIq"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="FmO-DD-RPK" secondAttribute="bottom" constant="453" id="UtR-eR-mZ7"/>
+                            <constraint firstAttribute="trailing" secondItem="zhv-yT-4cd" secondAttribute="trailing" id="bvs-9d-ify"/>
+                            <constraint firstItem="vhB-Qq-Qrr" firstAttribute="top" secondItem="zhv-yT-4cd" secondAttribute="bottom" constant="8" id="d0Q-C2-CeE"/>
                             <constraint firstItem="FmO-DD-RPK" firstAttribute="leading" secondItem="IvS-Oi-i52" secondAttribute="leading" id="rBT-Wo-EDV"/>
                             <constraint firstItem="IvS-Oi-i52" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wqt-Td-lRy"/>
+                            <constraint firstItem="vhB-Qq-Qrr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="z0p-eE-CRm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ColorLabel" destination="zhv-yT-4cd" id="gvc-2J-jgY"/>
                         <outlet property="MakeLabel" destination="LP9-hj-h1N" id="6Mw-uw-6fq"/>
                         <outlet property="ModelLabel" destination="Jac-hv-Ydh" id="6yX-eI-Oy8"/>
                         <outlet property="PriceLabel" destination="m5a-bM-fKF" id="otX-Xm-Lbg"/>

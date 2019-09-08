@@ -96,9 +96,10 @@
         UITableViewCell* cell = (UITableViewCell*)sender;
         ViewController *vc = [segue destinationViewController];
         NSString *index = self.myCarModel.ImageNameToIndex[cell.textLabel.text];
-        NSLog(@"%@",index);
+//        NSLog(@"%@",index);
         vc.imageName = self.myImageModel.imageNames[[index intValue]];
-        NSLog(@"%@",vc.imageName);
+        vc.imageIndex = index;
+//        NSLog(@"%@",vc.imageName);
 //        cell.textLabel.text;
     }
     

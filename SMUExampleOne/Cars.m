@@ -35,7 +35,7 @@
 
 -(NSArray*)CarPrices{
     if(!_CarPrices)
-        _CarPrices = @[@37230,@105745,@53475];
+        _CarPrices = @[@"37230",@"105745",@"53475"];
     return _CarPrices;
 }
 

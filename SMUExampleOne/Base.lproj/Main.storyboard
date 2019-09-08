@@ -69,6 +69,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MakeLabel" destination="LP9-hj-h1N" id="6Mw-uw-6fq"/>
+                        <outlet property="ModelLabel" destination="Jac-hv-Ydh" id="6yX-eI-Oy8"/>
+                        <outlet property="PriceLabel" destination="m5a-bM-fKF" id="otX-Xm-Lbg"/>
                         <outlet property="scrollView" destination="FmO-DD-RPK" id="WCH-1u-VeT"/>
                     </connections>
                 </viewController>

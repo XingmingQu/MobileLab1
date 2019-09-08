@@ -8,13 +8,17 @@
 
 #import "ViewController.h"
 #import "ImageModel.h"
-
+#import "Cars.h"
 @interface ViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *ModelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
 
 @property (strong,nonatomic) ImageModel* myImageModel;
+@property (strong,nonatomic) Cars* myCarModel;
 
 @end
 
@@ -28,10 +32,19 @@
     return _myImageModel;
 }
 
+-(Cars*)myCarModel{
+    
+    if(!_myCarModel)
+        _myCarModel =[Cars sharedInstance];
+    
+    return _myCarModel;
+}
+
+
 -(NSString*)imageName{
     
     if(!_imageName)
-        _imageName = @"Eric1";
+        _imageName = @"bmw";
     
     return _imageName;
 }
@@ -65,6 +78,15 @@
     self.scrollView.maximumZoomScale = 4;
     self.scrollView.delegate = self;
     
+    NSString *modelName = @"Model:  ";
+    modelName = [modelName stringByAppendingString:[Cars sharedInstance].CarNames[[_imageIndex intValue]]];
+    NSString *MakeName = @"Make:  ";
+    MakeName = [MakeName stringByAppendingString:[Cars sharedInstance].CarBrands[[_imageIndex intValue]]];
+    NSString *Price = @"Price:  ";
+    Price = [Price stringByAppendingString:[Cars sharedInstance].CarPrices[[_imageIndex intValue]]];
+    self.ModelLabel.text = modelName;
+    self.MakeLabel.text = MakeName;
+    self.PriceLabel.text = Price;
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

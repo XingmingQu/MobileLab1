@@ -13,10 +13,12 @@
 
 @property (strong, nonatomic) UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UILabel *ModelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ColorLabel;
+
 - (IBAction)JumpToWeb:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIStepper *monthSteper;
 
@@ -25,6 +27,13 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *ARPLabel;
 @property (weak, nonatomic) IBOutlet UILabel *LoanTermLabel;
+@property (weak, nonatomic) IBOutlet UISlider *APRslider;
+@property (weak, nonatomic) IBOutlet UILabel *EMPLabel;
+
+-(void)setEMPlabelValue;
+
+- (IBAction)sliderValueChanged:(UISlider *)sender;
+
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
@@ -33,8 +42,33 @@
 
 @implementation ViewController
 
+
+-(void)setEMPlabelValue{
+    double ARP = self.APRslider.value /12/100;
+    double months =self.monthSteper.value;
+    double carPrice = [[Cars sharedInstance].CarPrices[[_imageIndex intValue]] intValue] ;
+    int EMP = (carPrice* ARP)/ (1-pow(1+ARP, -months));
+    //    NSLog(@"%.5f",ARP);
+    //    NSLog(@"%.5f",months);
+    //    NSLog(@"%f",carPrice);
+    //    NSLog(@"%d",EMP);
+    NSString *EMPValue = [NSString stringWithFormat:@"%d", EMP];
+    self.EMPLabel.text = EMPValue;
+}
+
+
+
 - (IBAction)JumpToWeb:(UIButton *)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.cars.com"]];
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    NSString *sliderValue = [NSString stringWithFormat:@"%.2f%%", sender.value];
+    self.ARPLabel.text = sliderValue;
+    
+//    NSLog(@"%d",[[Cars sharedInstance].CarPrices[[_imageIndex intValue]] intValue] );
+    
+    [self setEMPlabelValue];
 }
 
 -(ImageModel*)myImageModel{
@@ -121,7 +155,7 @@
     
     //------------set table----------------
     
-    
+    [self setEMPlabelValue];
     
     
 
@@ -154,5 +188,13 @@
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     NSString *stepperValue = [NSString stringWithFormat:@"%.0f", sender.value];
     self.LoanTermLabel.text = stepperValue;
+//    double ARP = sender.value /12/100;
+//    double months =self.monthSteper.value;
+//    double carPrice = [[Cars sharedInstance].CarPrices[[_imageIndex intValue]] intValue] ;
+//    int EMP = (carPrice* ARP)/ (1-pow(1+ARP, -months));
+//
+//    NSString *EMPValue = [NSString stringWithFormat:@"%d", EMP];
+//    self.EMPLabel.text = EMPValue;
+    [self setEMPlabelValue];
 }
 @end

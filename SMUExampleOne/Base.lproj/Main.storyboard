@@ -73,8 +73,11 @@
                                     <action selector="JumpToWeb:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pSA-Be-nhX"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-t9-djP">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-t9-djP">
                                 <rect key="frame" x="18" y="465" width="339" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="HDO-Jx-YOC"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate (APR)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKc-5y-k7F">
                                 <rect key="frame" x="16" y="441.5" width="138.5" height="19.5"/>
@@ -83,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15S-Ar-dJY">
-                                <rect key="frame" x="309" y="440.5" width="51.5" height="19.5"/>
+                                <rect key="frame" x="297" y="440.5" width="63.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -100,14 +103,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minimumValue="6" maximumValue="72" stepValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-7v-shJ">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="24" minimumValue="6" maximumValue="72" stepValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-7v-shJ">
                                 <rect key="frame" x="198.5" y="506" width="94" height="29"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cum-ap-pSN"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-wc-2hj">
-                                <rect key="frame" x="309" y="509" width="50" height="20"/>
+                                <rect key="frame" x="309" y="509" width="50" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -145,7 +148,7 @@
                             <constraint firstItem="zhv-yT-4cd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="3" id="kwx-c5-o2s"/>
                             <constraint firstItem="QkU-t9-djP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="lET-DJ-1Yt"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="FmO-DD-RPK" secondAttribute="bottom" constant="453" id="lGM-HP-2ev"/>
-                            <constraint firstItem="15S-Ar-dJY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="309" id="qAg-H6-xt7"/>
+                            <constraint firstItem="15S-Ar-dJY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="297" id="qAg-H6-xt7"/>
                             <constraint firstItem="vhB-Qq-Qrr" firstAttribute="top" secondItem="zhv-yT-4cd" secondAttribute="bottom" constant="8.5" id="rrD-Xy-9XC"/>
                             <constraint firstAttribute="trailing" secondItem="HAT-uR-hp9" secondAttribute="trailing" constant="50" id="sb5-dL-GY8"/>
                             <constraint firstItem="gLu-wc-2hj" firstAttribute="top" secondItem="QkU-t9-djP" secondAttribute="bottom" constant="14" id="sef-y8-W2x"/>
@@ -157,8 +160,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="APRslider" destination="QkU-t9-djP" id="FVD-CL-Gc7"/>
                         <outlet property="ARPLabel" destination="15S-Ar-dJY" id="5Js-V7-9r5"/>
                         <outlet property="ColorLabel" destination="zhv-yT-4cd" id="gvc-2J-jgY"/>
+                        <outlet property="EMPLabel" destination="YIu-kP-opl" id="Qk5-nh-x3Y"/>
                         <outlet property="LoanTermLabel" destination="gLu-wc-2hj" id="btK-Pj-k2b"/>
                         <outlet property="MakeLabel" destination="LP9-hj-h1N" id="6Mw-uw-6fq"/>
                         <outlet property="ModelLabel" destination="Jac-hv-Ydh" id="6yX-eI-Oy8"/>

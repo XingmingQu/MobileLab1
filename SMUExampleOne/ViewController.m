@@ -17,6 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ColorLabel;
+- (IBAction)JumpToWeb:(UIButton *)sender;
+
+//- (IBAction)JumpToWeb:(UIButton *)sender;
+
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
@@ -24,6 +28,10 @@
 @end
 
 @implementation ViewController
+
+- (IBAction)JumpToWeb:(UIButton *)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.cars.com"]];
+}
 
 -(ImageModel*)myImageModel{
     
@@ -64,7 +72,7 @@
         _imageView = [[UIImageView alloc] initWithImage:[[ImageModel sharedInstance] getImageWithName:self.imageName]];
     
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _imageView.frame = CGRectMake(0, 480, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+    _imageView.frame = CGRectMake(0, 440, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     return _imageView;
 }
 
@@ -82,6 +90,8 @@
     [_ColorLabel setTextColor:[UIColor colorWithRed:red green:green blue:blue alpha:1]];
     
 }
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -114,5 +124,8 @@
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return self.imageView;
 }
+
+
+
 
 @end

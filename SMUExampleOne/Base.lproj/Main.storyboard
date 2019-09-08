@@ -65,6 +65,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-uR-hp9">
+                                <rect key="frame" x="50" y="632" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.1348191352739726" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Click to See more info at Cars.com"/>
+                                <connections>
+                                    <action selector="JumpToWeb:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pSA-Be-nhX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93195459897142985" green="0.93195459897142985" blue="0.93195459897142985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -77,11 +85,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZdC-Hs-zhx" secondAttribute="trailing" constant="30" id="EWh-zO-6dy"/>
                             <constraint firstItem="FmO-DD-RPK" firstAttribute="trailing" secondItem="IvS-Oi-i52" secondAttribute="trailing" id="MhW-xb-JUl"/>
                             <constraint firstItem="zhv-yT-4cd" firstAttribute="top" secondItem="ZdC-Hs-zhx" secondAttribute="bottom" constant="10.5" id="N4e-NZ-2zq"/>
+                            <constraint firstItem="HAT-uR-hp9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="50" id="PkH-tE-tzc"/>
                             <constraint firstItem="IvS-Oi-i52" firstAttribute="top" secondItem="FmO-DD-RPK" secondAttribute="bottom" constant="1" id="RKg-J8-AIq"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="FmO-DD-RPK" secondAttribute="bottom" constant="453" id="UtR-eR-mZ7"/>
                             <constraint firstAttribute="trailing" secondItem="zhv-yT-4cd" secondAttribute="trailing" id="bvs-9d-ify"/>
                             <constraint firstItem="vhB-Qq-Qrr" firstAttribute="top" secondItem="zhv-yT-4cd" secondAttribute="bottom" constant="8" id="d0Q-C2-CeE"/>
                             <constraint firstItem="FmO-DD-RPK" firstAttribute="leading" secondItem="IvS-Oi-i52" secondAttribute="leading" id="rBT-Wo-EDV"/>
+                            <constraint firstAttribute="trailing" secondItem="HAT-uR-hp9" secondAttribute="trailing" constant="50" id="sb5-dL-GY8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HAT-uR-hp9" secondAttribute="bottom" constant="5" id="vNT-Nw-H4O"/>
                             <constraint firstItem="IvS-Oi-i52" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wqt-Td-lRy"/>
                             <constraint firstItem="vhB-Qq-Qrr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="z0p-eE-CRm"/>
                         </constraints>
@@ -146,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="1100" y="1523"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Car Galary-->
         <scene sceneID="0Gp-qL-SWs">
             <objects>
                 <tableViewController id="VbI-O7-5xz" customClass="TableViewController" sceneMemberID="viewController">
@@ -208,7 +219,7 @@
                             <outlet property="delegate" destination="VbI-O7-5xz" id="ENk-xY-oof"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="uNd-rX-80u"/>
+                    <navigationItem key="navigationItem" title="Car Galary" id="uNd-rX-80u"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1C-3q-3mr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

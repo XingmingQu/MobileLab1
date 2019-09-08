@@ -18,9 +18,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ColorLabel;
 - (IBAction)JumpToWeb:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIStepper *monthSteper;
 
 //- (IBAction)JumpToWeb:(UIButton *)sender;
+- (IBAction)stepperValueChanged:(UIStepper *)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *ARPLabel;
+@property (weak, nonatomic) IBOutlet UILabel *LoanTermLabel;
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
@@ -103,15 +107,36 @@
     self.scrollView.maximumZoomScale = 4;
     self.scrollView.delegate = self;
     
+    //------------set table----------------
     NSString *modelName = @"Model:  ";
     modelName = [modelName stringByAppendingString:[Cars sharedInstance].CarNames[[_imageIndex intValue]]];
     NSString *MakeName = @"Make:  ";
     MakeName = [MakeName stringByAppendingString:[Cars sharedInstance].CarBrands[[_imageIndex intValue]]];
     NSString *Price = @"Price:  ";
     Price = [Price stringByAppendingString:[Cars sharedInstance].CarPrices[[_imageIndex intValue]]];
+    
     self.ModelLabel.text = modelName;
     self.MakeLabel.text = MakeName;
     self.PriceLabel.text = Price;
+    
+    //------------set table----------------
+    
+    
+    
+    
+
+    self.monthSteper.transform = CGAffineTransformMakeScale(0.7, 0.7);
+    
+    //------------set label border----------------
+    self.ARPLabel.layer.borderColor = [[UIColor grayColor]CGColor];
+    self.ARPLabel.layer.borderWidth = 1;
+    self.LoanTermLabel.layer.borderColor = [[UIColor grayColor]CGColor];
+    self.LoanTermLabel.layer.borderWidth = 1;
+    //------------set label border----------------
+    
+    
+    
+//    self.LoanTermLabel.text = self.monthSteper.
 //    [self changeLabelColor];
 //    [_ColorLabel setTextColor:[UIColor redColor]];
 //    NSTimer *timer = NSTimer sche
@@ -126,6 +151,8 @@
 }
 
 
-
-
+- (IBAction)stepperValueChanged:(UIStepper *)sender {
+    NSString *stepperValue = [NSString stringWithFormat:@"%.0f", sender.value];
+    self.LoanTermLabel.text = stepperValue;
+}
 @end

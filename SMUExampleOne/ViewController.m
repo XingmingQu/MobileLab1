@@ -110,7 +110,7 @@
         _imageView = [[UIImageView alloc] initWithImage:[[ImageModel sharedInstance] getImageWithName:self.imageName]];
     
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _imageView.frame = CGRectMake(0, 400, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+    _imageView.frame = CGRectMake(0, 380, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     return _imageView;
 }
 

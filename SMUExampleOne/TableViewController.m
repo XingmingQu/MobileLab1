@@ -134,7 +134,7 @@
 //        NSLog(@"%@",index);
         vc.imageName = self.myImageModel.imageNames[[index intValue]];
         vc.imageIndex = index;
-        NSLog(@"%@",vc.imageName);
+//        NSLog(@"%@",vc.imageName);
 //        cell.textLabel.text;
     }
     

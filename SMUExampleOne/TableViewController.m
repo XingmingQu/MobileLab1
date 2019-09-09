@@ -46,7 +46,7 @@
         self.titilelabel.title = _TitleNames[0];
     }else{
         
-    NSUInteger r = arc4random_uniform(3);
+    NSUInteger r = arc4random_uniform(4);
     self.titilelabel.title = _TitleNames[r];
 //    NSLog(@"%d",self.TitleNames.count);
 
@@ -134,7 +134,7 @@
 //        NSLog(@"%@",index);
         vc.imageName = self.myImageModel.imageNames[[index intValue]];
         vc.imageIndex = index;
-//        NSLog(@"%@",vc.imageName);
+        NSLog(@"%@",vc.imageName);
 //        cell.textLabel.text;
     }
     

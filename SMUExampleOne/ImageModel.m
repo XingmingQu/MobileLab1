@@ -14,10 +14,19 @@
 -(NSArray*)imageNames{
     
     if(!_imageNames)
-        _imageNames = @[@"civic",@"bmw",@"mustang"];
+        _imageNames = @[@"civic",@"bmw",@"mustang",@"ferr"];
     
     return _imageNames;
 }
+
+-(NSArray*)CollectionimageNames{
+    
+    if(!_CollectionimageNames)
+        _CollectionimageNames = @[@"civicC",@"bmwC",@"mustangC",@"ferrC"];
+    
+    return _CollectionimageNames;
+}
+
 
 +(ImageModel*)sharedInstance{
     static ImageModel * _sharedInstance = nil;

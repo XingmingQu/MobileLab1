@@ -12,6 +12,8 @@
 @interface ImageModel : NSObject
 
 @property (strong,nonatomic) NSArray* imageNames;
+@property (strong,nonatomic) NSArray* CollectionimageNames;
+
 
 +(ImageModel*) sharedInstance;
 

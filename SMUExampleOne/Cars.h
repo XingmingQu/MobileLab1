@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic) NSArray* CarNames;
 @property (strong,nonatomic) NSArray* CarBrands;
 @property (strong,nonatomic) NSArray* CarPrices;
+@property (strong,nonatomic) NSArray* CarPricesString;
+
 +(Cars*) sharedInstance;
 @end
 

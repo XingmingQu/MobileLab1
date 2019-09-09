@@ -52,7 +52,7 @@
     //    NSLog(@"%.5f",months);
     //    NSLog(@"%f",carPrice);
     //    NSLog(@"%d",EMP);
-    NSString *EMPValue = [NSString stringWithFormat:@"%d", EMP];
+    NSString *EMPValue = [NSString stringWithFormat:@"$%d", EMP];
     self.EMPLabel.text = EMPValue;
 }
 
@@ -110,7 +110,7 @@
         _imageView = [[UIImageView alloc] initWithImage:[[ImageModel sharedInstance] getImageWithName:self.imageName]];
     
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _imageView.frame = CGRectMake(0, 440, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+    _imageView.frame = CGRectMake(0, 400, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     return _imageView;
 }
 
@@ -147,7 +147,7 @@
     NSString *MakeName = @"Make:  ";
     MakeName = [MakeName stringByAppendingString:[Cars sharedInstance].CarBrands[[_imageIndex intValue]]];
     NSString *Price = @"Price:  ";
-    Price = [Price stringByAppendingString:[Cars sharedInstance].CarPrices[[_imageIndex intValue]]];
+    Price = [Price stringByAppendingString:[Cars sharedInstance].CarPricesString[[_imageIndex intValue]]];
     
     self.ModelLabel.text = modelName;
     self.MakeLabel.text = MakeName;

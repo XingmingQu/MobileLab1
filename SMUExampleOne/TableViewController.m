@@ -105,18 +105,19 @@
 //        cell.textLabel.text = self.myImageModel.imageNames[indexPath.row];
         cell.textLabel.text = self.myCarModel.CarNames[indexPath.row];
         cell.detailTextLabel.text = @"More";
+        
     }
     else if(indexPath.section==1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CollectionCell" forIndexPath:indexPath];
         
         // Configure the cell...
-        cell.textLabel.text = @"Collection";
-        cell.detailTextLabel.text = @"See a collection of cars";
+        cell.textLabel.text = @"Car Photos Collection";
+//        cell.detailTextLabel.text = @"See a collection of cars";
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"PickerCell" forIndexPath:indexPath];
         
         // Configure the cell...
-        cell.textLabel.text = @"PickerCell";
+        cell.textLabel.text = @"Brands and History";
         cell.detailTextLabel.text = @"See car Brand logos and their history";
     }
     

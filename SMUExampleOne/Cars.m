@@ -39,11 +39,6 @@
     return _CarPrices;
 }
 
--(NSArray*)CarPricesString{
-    if(!_CarPricesString)
-        _CarPricesString = @[@"$37,230",@"$105,745",@"$53,475",@"$219,990",@"100,240",@"569,995"];
-    return _CarPricesString;
-}
 
 +(Cars*)sharedInstance{
     static Cars * _sharedInstance = nil;

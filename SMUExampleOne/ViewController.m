@@ -146,8 +146,8 @@
     modelName = [modelName stringByAppendingString:[Cars sharedInstance].CarNames[[_imageIndex intValue]]];
     NSString *MakeName = @"Make:  ";
     MakeName = [MakeName stringByAppendingString:[Cars sharedInstance].CarBrands[[_imageIndex intValue]]];
-    NSString *Price = @"Price:  ";
-    Price = [Price stringByAppendingString:[Cars sharedInstance].CarPricesString[[_imageIndex intValue]]];
+    NSString *Price = @"Price:  $ ";
+    Price = [Price stringByAppendingString:[Cars sharedInstance].CarPrices[[_imageIndex intValue]]];
     
     self.ModelLabel.text = modelName;
     self.MakeLabel.text = MakeName;

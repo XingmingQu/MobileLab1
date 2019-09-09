@@ -12,10 +12,11 @@
 #import "Cars.h"
 
 @interface TableViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationItem *titilelabel;
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
-
+@property (strong,nonatomic) NSArray* TitleNames;
 @end
 
 @implementation TableViewController
@@ -36,15 +37,42 @@
     return _myCarModel;
 }
 
+-(void)changeTitle{
+    
+//    int randomIndex = UINT32_C(self.TitleNames.count);
+  
+//    int i = arc4random_uniform(self.TitleNames.count);
+    if (self.TitleNames.count == 0){
+        self.titilelabel.title = _TitleNames[0];
+    }else{
+        
+    NSUInteger r = arc4random_uniform(3);
+    self.titilelabel.title = _TitleNames[r];
+//    NSLog(@"%d",self.TitleNames.count);
+
+    }
+}
+
+
+-(NSArray*)TitleNames{
+    
+    if(!_TitleNames)
+        _TitleNames = @[@"Car Galary",@"Find You Favourite Cars",@"See Your Estimated Monthly Payment", @"View Car Brands and History"];
+    
+    return _TitleNames;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    self.titilelabel.title =@"dasdasd";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeTitle) userInfo:nil repeats:(YES)];
+    
+    [timer fire];
 }
 
 
@@ -52,7 +80,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -78,11 +106,18 @@
         cell.textLabel.text = self.myCarModel.CarNames[indexPath.row];
         cell.detailTextLabel.text = @"More";
     }
-    else{
+    else if(indexPath.section==1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CollectionCell" forIndexPath:indexPath];
         
         // Configure the cell...
         cell.textLabel.text = @"Collection";
+        cell.detailTextLabel.text = @"See a collection of cars";
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"PickerCell" forIndexPath:indexPath];
+        
+        // Configure the cell...
+        cell.textLabel.text = @"PickerCell";
+        cell.detailTextLabel.text = @"See car Brand logos and their history";
     }
     
     return cell;

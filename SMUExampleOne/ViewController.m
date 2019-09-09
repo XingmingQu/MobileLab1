@@ -44,16 +44,18 @@
 
 
 -(void)setEMPlabelValue{
+    
+    // calculate EMP by its math formula
     double ARP = self.APRslider.value /12/100;
     double months =self.monthSteper.value;
     double carPrice = [[Cars sharedInstance].CarPrices[[_imageIndex intValue]] intValue] ;
     int EMP = (carPrice* ARP)/ (1-pow(1+ARP, -months));
+    NSString *EMPValue = [NSString stringWithFormat:@"$%d", EMP];
+    self.EMPLabel.text = EMPValue;
     //    NSLog(@"%.5f",ARP);
     //    NSLog(@"%.5f",months);
     //    NSLog(@"%f",carPrice);
     //    NSLog(@"%d",EMP);
-    NSString *EMPValue = [NSString stringWithFormat:@"$%d", EMP];
-    self.EMPLabel.text = EMPValue;
 }
 
 
@@ -65,7 +67,6 @@
 - (IBAction)sliderValueChanged:(UISlider *)sender {
     NSString *sliderValue = [NSString stringWithFormat:@"%.2f%%", sender.value];
     self.ARPLabel.text = sliderValue;
-    
 //    NSLog(@"%d",[[Cars sharedInstance].CarPrices[[_imageIndex intValue]] intValue] );
     
     [self setEMPlabelValue];
@@ -115,16 +116,10 @@
 }
 
 -(void)changeLabelColor{
-//    static BOOL seeded = NO;
-//    if (!seeded){
-//        seeded = YES;
-//        time(NULL);
-//    }
-    
+    // use random color to set label's txt
     CGFloat red = (CGFloat)random()/(CGFloat)RAND_MAX;
     CGFloat green = (CGFloat)random()/(CGFloat)RAND_MAX;
     CGFloat blue = (CGFloat)random()/(CGFloat)RAND_MAX;
-    
     [_ColorLabel setTextColor:[UIColor colorWithRed:red green:green blue:blue alpha:1]];
     
 }
@@ -134,14 +129,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
+    //------------------auto size a UIScrollView to fit its content--------------------------
+
     [self.scrollView addSubview:self.imageView];
-    self.scrollView.contentSize = self.imageView.image.size;
+    CGRect contentRect = CGRectZero;
+    for (UIView *view in self.scrollView.subviews) {
+        contentRect = CGRectUnion(contentRect, view.frame);
+    }
+    self.scrollView.contentSize = contentRect.size;
+    //------------------auto size a UIScrollView to fit its content--------------------------
+    
+    //------------set scrollView's parameter----------------
     self.scrollView.minimumZoomScale = 0.1;
     self.scrollView.maximumZoomScale = 4;
     self.scrollView.delegate = self;
+    //------------set scrollView's parameter----------------
     
-    //------------set table----------------
+    //------------set labels----------------
     NSString *modelName = @"Model:  ";
     modelName = [modelName stringByAppendingString:[Cars sharedInstance].CarNames[[_imageIndex intValue]]];
     NSString *MakeName = @"Make:  ";
@@ -152,14 +157,9 @@
     self.ModelLabel.text = modelName;
     self.MakeLabel.text = MakeName;
     self.PriceLabel.text = Price;
-    
-    //------------set table----------------
-    
     [self setEMPlabelValue];
-    
-    
-
     self.monthSteper.transform = CGAffineTransformMakeScale(0.7, 0.7);
+    //------------set labels----------------
     
     //------------set label border----------------
     self.ARPLabel.layer.borderColor = [[UIColor grayColor]CGColor];
@@ -169,12 +169,8 @@
     //------------set label border----------------
     
     
-    
-//    self.LoanTermLabel.text = self.monthSteper.
-//    [self changeLabelColor];
-//    [_ColorLabel setTextColor:[UIColor redColor]];
-//    NSTimer *timer = NSTimer sche
-    //timer
+
+    //set timer
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeLabelColor) userInfo:nil repeats:(YES)];
     
     [timer fire];

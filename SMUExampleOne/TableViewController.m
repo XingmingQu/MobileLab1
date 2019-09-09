@@ -81,10 +81,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 3;
+    // Three prototype cells
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    
+    // Only first type has more than one sections
     if(section==0)
         return self.myImageModel.imageNames.count;
     else
@@ -94,14 +97,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     UITableViewCell *cell = nil;
     
     if(indexPath.section==0){
         cell = [tableView dequeueReusableCellWithIdentifier:@"ImageNameCell" forIndexPath:indexPath];
-        
-        // Configure the cell...
-        
 //        cell.textLabel.text = self.myImageModel.imageNames[indexPath.row];
         cell.textLabel.text = self.myCarModel.CarNames[indexPath.row];
         cell.detailTextLabel.text = @"More";

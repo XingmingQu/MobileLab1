@@ -68,7 +68,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-uR-hp9">
                                 <rect key="frame" x="50" y="632" width="275" height="30"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.1348191352739726" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Click to See more info at Cars.com"/>
+                                <state key="normal" title="Click to go to Cars.com"/>
                                 <connections>
                                     <action selector="JumpToWeb:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pSA-Be-nhX"/>
                                 </connections>
@@ -236,53 +236,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="honda" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-2C-w2x">
-                                <rect key="frame" x="119" y="111" width="137" height="134"/>
-                            </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="weq-FW-Myk">
-                                <rect key="frame" x="16" y="68" width="343" height="29"/>
-                                <segments>
-                                    <segment title="Light"/>
-                                    <segment title="Dark"/>
-                                </segments>
-                                <connections>
-                                    <action selector="SegIndexChanged:" destination="HE9-lF-bRC" eventType="valueChanged" id="P4Y-om-g0r"/>
-                                </connections>
-                            </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="HisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisrory" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-Ot-Jpt">
-                                <rect key="frame" x="7" y="253" width="359" height="75"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Car Brand and its History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAH-Dm-y5k">
                                 <rect key="frame" x="27" y="387" width="321" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="HisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisrory" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-Ot-Jpt">
+                                <rect key="frame" x="7" y="253" width="359" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hzK-0n-xmq">
+                                <rect key="frame" x="168" y="633" width="194" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr4-TN-75d">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SK8-c6-ZKg">
+                                        <rect key="frame" x="145" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="SwitchChanged:" destination="HE9-lF-bRC" eventType="valueChanged" id="JfG-GM-9aP"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="honda" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-2C-w2x">
+                                <rect key="frame" x="76" y="72" width="222" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="weq-FW-Myk" secondAttribute="trailing" constant="16" id="1UP-gK-jcl"/>
+                            <constraint firstAttribute="trailing" secondItem="hzK-0n-xmq" secondAttribute="trailing" constant="13" id="1nG-eB-E0H"/>
                             <constraint firstAttribute="trailing" secondItem="jAH-Dm-y5k" secondAttribute="trailing" constant="27" id="2Tb-Mc-w3C"/>
-                            <constraint firstItem="weq-FW-Myk" firstAttribute="top" secondItem="w4M-4K-iPy" secondAttribute="bottom" constant="4" id="76b-mQ-pUb"/>
                             <constraint firstAttribute="trailing" secondItem="Qot-Ot-Jpt" secondAttribute="trailing" constant="9" id="CeX-bu-NG6"/>
                             <constraint firstItem="jAH-Dm-y5k" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="27" id="FnS-T8-JtX"/>
-                            <constraint firstItem="KMq-2C-w2x" firstAttribute="top" secondItem="weq-FW-Myk" secondAttribute="bottom" constant="15" id="GAR-uA-APY"/>
                             <constraint firstItem="jAH-Dm-y5k" firstAttribute="top" secondItem="Qot-Ot-Jpt" secondAttribute="bottom" constant="59" id="Nec-Lj-aLz"/>
-                            <constraint firstAttribute="trailing" secondItem="KMq-2C-w2x" secondAttribute="trailing" constant="119" id="RsR-kt-AwL"/>
+                            <constraint firstItem="hzK-0n-xmq" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="168" id="QvI-Bw-xOm"/>
                             <constraint firstItem="zPl-iE-r6H" firstAttribute="top" secondItem="Qot-Ot-Jpt" secondAttribute="bottom" constant="339" id="U8X-sl-QAd"/>
-                            <constraint firstItem="Qot-Ot-Jpt" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="8" id="YEJ-r5-efR"/>
-                            <constraint firstItem="weq-FW-Myk" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="16" id="fee-Ea-xbG"/>
-                            <constraint firstItem="KMq-2C-w2x" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="119" id="ufE-K6-P24"/>
+                            <constraint firstItem="zPl-iE-r6H" firstAttribute="top" secondItem="hzK-0n-xmq" secondAttribute="bottom" constant="3" id="nZh-Lq-fUt"/>
                             <constraint firstItem="Qot-Ot-Jpt" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="7" id="yRX-Y9-W6u"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DarkModelLabel" destination="dr4-TN-75d" id="nFA-xr-Ruz"/>
+                        <outlet property="SwitchButton" destination="SK8-c6-ZKg" id="2s7-KI-eP8"/>
                         <outlet property="brandView" destination="KMq-2C-w2x" id="Xlw-Pf-qrg"/>
                         <outlet property="historyText" destination="Qot-Ot-Jpt" id="JEc-Tj-ecT"/>
-                        <outlet property="segmentControlButton" destination="weq-FW-Myk" id="YQu-PO-L1y"/>
+                        <outlet property="titleLabel" destination="jAH-Dm-y5k" id="oxH-81-FyR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJx-3y-QUj" userLabel="First Responder" sceneMemberID="firstResponder"/>

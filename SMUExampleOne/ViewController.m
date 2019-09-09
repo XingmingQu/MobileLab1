@@ -9,10 +9,13 @@
 #import "ViewController.h"
 #import "ImageModel.h"
 #import "Cars.h"
+#import "ShowDetailsViewController.h"
+
 @interface ViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *segmentScrollView;
 
 @property (weak, nonatomic) IBOutlet UILabel *ModelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
@@ -37,6 +40,10 @@
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
+- (IBAction)indexChanged:(UISegmentedControl *)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
+@property(weak, nonatomic) UIView *detailsView;
 
 @end
 
@@ -85,6 +92,22 @@
         _myCarModel =[Cars sharedInstance];
     
     return _myCarModel;
+}
+
+- (IBAction)indexChanged:(UISegmentedControl *)sender {
+    
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            [self.segmentScrollView bringSubviewToFront:_imageView];
+            break;
+        case 1:
+            [self.segmentScrollView bringSubviewToFront:_detailsView];
+            break;
+        default:
+            
+            break;
+    }
 }
 
 
@@ -141,6 +164,12 @@
     self.scrollView.maximumZoomScale = 4;
     self.scrollView.delegate = self;
     
+    [self.segmentScrollView addSubview:self.imageView];
+    self.segmentScrollView.contentSize= self.imageView.image.size;
+    self.segmentScrollView.minimumZoomScale = 0.1;
+    self.segmentScrollView.maximumZoomScale = 4;
+    self.segmentScrollView.delegate = self;
+    
     //------------set table----------------
     NSString *modelName = @"Model:  ";
     modelName = [modelName stringByAppendingString:[Cars sharedInstance].CarNames[[_imageIndex intValue]]];
@@ -169,7 +198,14 @@
     //------------set label border----------------
     
     
+    //-------create the view instances for segmented control----------------
     
+    _detailsView = [ShowDetailsViewController alloc].view;
+    [self.segmentScrollView addSubview:self.imageView];
+    [self.segmentScrollView addSubview:self.detailsView];
+    [self.segmentScrollView bringSubviewToFront:_imageView];
+    
+    //-------------------------------------
 //    self.LoanTermLabel.text = self.monthSteper.
 //    [self changeLabelColor];
 //    [_ColorLabel setTextColor:[UIColor redColor]];

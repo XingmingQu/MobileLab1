@@ -7,23 +7,45 @@
 //
 
 #import "BrandAndPickerViewController.h"
-
-@interface BrandAndPickerViewController ()
+#import "BrandsAndHistory.h"
+@interface BrandAndPickerViewController () <UIPickerViewDelegate,UIPickerViewDataSource>
 //@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControlButton;
+
+{
+NSArray *pickerData;
+}
+
 @property (weak, nonatomic) IBOutlet UITextView *historyText;
 @property (weak, nonatomic) IBOutlet UIImageView *brandView;
 @property (weak, nonatomic) IBOutlet UISwitch *SwitchButton;
 @property (weak, nonatomic) IBOutlet UILabel *DarkModelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIPickerView *brandPicker;
+
+
+@property (strong,nonatomic) BrandsAndHistory* myBrandHistory;
+
 
 @end
 
 @implementation BrandAndPickerViewController
 
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //    _historyText.text = @"HisroryHisroryHisroryHisroryHisrory";
+    
+//    NSString *ss = [BrandsAndHistory sharedInstance].BrandHistory[1];
+//    NSLog(@"%@",ss);
+    
+    pickerData = [BrandsAndHistory sharedInstance].BrandNames;
+
+    self.brandPicker.dataSource = self;
+    self.brandPicker.delegate = self;
 }
 
 - (IBAction)SwitchChanged:(UISwitch *)sender {
@@ -31,6 +53,7 @@
         self.view.backgroundColor = [UIColor lightGrayColor];
         _historyText.backgroundColor = [UIColor lightGrayColor];
         _brandView.backgroundColor =[UIColor lightGrayColor];
+        _brandPicker.backgroundColor = [UIColor lightGrayColor];
         
         _DarkModelLabel.textColor = [UIColor whiteColor];
         _historyText.textColor = [UIColor whiteColor];
@@ -39,11 +62,28 @@
         self.view.backgroundColor = [UIColor whiteColor];
         _historyText.backgroundColor =[UIColor whiteColor];
         _brandView.backgroundColor =[UIColor whiteColor];
+        _brandPicker.backgroundColor = [UIColor colorWithRed:235.0f/255 green:252.0f/255 blue:255.0f/255 alpha:1];
         
         _DarkModelLabel.textColor = [UIColor blackColor];
         _historyText.textColor = [UIColor blackColor];
         _titleLabel.textColor = [UIColor blackColor];
     }
+}
+
+
+
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return pickerData.count;
+}
+
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [pickerData objectAtIndex:row];
 }
 
 //- (IBAction)SegIndexChanged:(UISegmentedControl *)sender {

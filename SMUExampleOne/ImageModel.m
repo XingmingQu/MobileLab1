@@ -14,7 +14,12 @@
 -(NSArray*)imageNames{
     
     if(!_imageNames)
-        _imageNames = @[@"civic",@"bmw",@"mustang",@"ferr",@"RS5",@"lambo"];
+        _imageNames = @[@"civic",
+                        @"bmw",
+                        @"mustang",
+                        @"ferr",
+                        @"RS5",
+                        @"lambo"];
     
     return _imageNames;
 }
@@ -22,7 +27,12 @@
 -(NSArray*)CollectionimageNames{
     
     if(!_CollectionimageNames)
-        _CollectionimageNames = @[@"civicC",@"bmwC",@"mustangC",@"ferrC",@"RS5C",@"lamboC"];
+        _CollectionimageNames = @[@"civicC",
+                                  @"bmwC",
+                                  @"mustangC",
+                                  @"ferrC",
+                                  @"RS5C",
+                                  @"lamboC"];
     
     return _CollectionimageNames;
 }

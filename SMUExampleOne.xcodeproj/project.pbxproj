@@ -10,6 +10,9 @@
 		82167D12232476FF00682975 /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 82167D11232476FF00682975 /* Cars.m */; };
 		8235CDC72326AFD50005E07B /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC62326AFD40005E07B /* ImageModel.m */; };
 		8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */; };
+		8235CDCD2326F68B0005E07B /* BrandsAndHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDCC2326F68B0005E07B /* BrandsAndHistory.m */; };
+		8235CDD02326FB300005E07B /* hondaHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDCF2326FB2F0005E07B /* hondaHistory.txt */; };
+		8235CDD32327064E0005E07B /* BMWHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDD22327064E0005E07B /* BMWHistory.txt */; };
 		B63FB1F81A709147007921E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1F71A709147007921E4 /* main.m */; };
 		B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FA1A709147007921E4 /* AppDelegate.m */; };
 		B63FB1FE1A709147007921E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FD1A709147007921E4 /* ViewController.m */; };
@@ -38,6 +41,11 @@
 		8235CDC62326AFD40005E07B /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		8235CDC82326D5DF0005E07B /* BrandAndPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandAndPickerViewController.h; sourceTree = "<group>"; };
 		8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandAndPickerViewController.m; sourceTree = "<group>"; };
+		8235CDCB2326F68B0005E07B /* BrandsAndHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandsAndHistory.h; sourceTree = "<group>"; };
+		8235CDCC2326F68B0005E07B /* BrandsAndHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandsAndHistory.m; sourceTree = "<group>"; };
+		8235CDCF2326FB2F0005E07B /* hondaHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hondaHistory.txt; path = ../../../../../Downloads/phtot/hondaHistory.txt; sourceTree = "<group>"; };
+		8235CDD12326FBFC0005E07B /* hondaHistory.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hondaHistory.txt; sourceTree = "<group>"; };
+		8235CDD22327064E0005E07B /* BMWHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BMWHistory.txt; path = ../../../../Downloads/phtot/BMWHistory.txt; sourceTree = "<group>"; };
 		B63FB1F21A709147007921E4 /* SMUExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMUExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB1F61A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB1F71A709147007921E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8235CDCE2326FA9A0005E07B /* txtfiles */ = {
+			isa = PBXGroup;
+			children = (
+				8235CDCF2326FB2F0005E07B /* hondaHistory.txt */,
+			);
+			path = txtfiles;
+			sourceTree = "<group>";
+		};
 		B63FB1E91A709147007921E4 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +115,15 @@
 		B63FB1F41A709147007921E4 /* SMUExampleOne */ = {
 			isa = PBXGroup;
 			children = (
+				8235CDD22327064E0005E07B /* BMWHistory.txt */,
+				8235CDD12326FBFC0005E07B /* hondaHistory.txt */,
+				8235CDCE2326FA9A0005E07B /* txtfiles */,
 				B63FB1F91A709147007921E4 /* AppDelegate.h */,
 				B63FB1FA1A709147007921E4 /* AppDelegate.m */,
 				B63FB1FC1A709147007921E4 /* ViewController.h */,
 				B63FB1FD1A709147007921E4 /* ViewController.m */,
+				8235CDCB2326F68B0005E07B /* BrandsAndHistory.h */,
+				8235CDCC2326F68B0005E07B /* BrandsAndHistory.m */,
 				B63FB21B1A7091A6007921E4 /* ImageModel.h */,
 				8235CDC62326AFD40005E07B /* ImageModel.m */,
 				B63FB1FF1A709147007921E4 /* Main.storyboard */,
@@ -231,8 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8235CDD32327064E0005E07B /* BMWHistory.txt in Resources */,
 				B63FB2011A709147007921E4 /* Main.storyboard in Resources */,
 				B63FB2061A709147007921E4 /* LaunchScreen.xib in Resources */,
+				8235CDD02326FB300005E07B /* hondaHistory.txt in Resources */,
 				B63FB2031A709147007921E4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +278,7 @@
 				8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */,
 				B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */,
 				82167D12232476FF00682975 /* Cars.m in Sources */,
+				8235CDCD2326F68B0005E07B /* BrandsAndHistory.m in Sources */,
 				8235CDC72326AFD50005E07B /* ImageModel.m in Sources */,
 				B63FB2261A70C64C007921E4 /* CollectionViewController.m in Sources */,
 				B63FB1F81A709147007921E4 /* main.m in Sources */,

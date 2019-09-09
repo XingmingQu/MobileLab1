@@ -1,0 +1,70 @@
+//
+//  BrandsAndHistory.m
+//  SMUExampleOne
+//
+//  Created by Xingming on 9/9/19.
+//  Copyright © 2019 Eric Larson. All rights reserved.
+//
+
+#import "BrandsAndHistory.h"
+
+@implementation BrandsAndHistory
+
+-(NSString*)getTxtContent:(NSString *)fileName{
+    NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:(@"txt")];
+    NSString* content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    return content;
+}
+
+-(NSArray*)BrandNames{
+    
+
+    
+    if(!_BrandNames)
+    {
+        _BrandNames = @[@"Honda",
+                        @"BMW",
+                        @"Ford",
+                        @"Ferrari",
+                        @"Audi",
+                        @"Lamborghini"];
+        
+    }
+//    [self getTxtContent:@"hondaHistory"],
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"hondaHistory" ofType:@"txt"];
+//        NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+//        
+    NSLog(@"%lu",(unsigned long)_BrandNames.count);
+
+    return _BrandNames;
+}
+
+
+-(NSArray*)BrandHistory{
+    
+    if(!_BrandHistory)
+        _BrandHistory= @[[self getTxtContent:@"hondaHistory"],
+                        [self getTxtContent:@"BMWHistory"],
+                        @"Ford",
+                        @"Ferrari",
+                        @"Audi",
+                        @"Lamborghini"];
+    
+    return _BrandHistory;
+}
+
+
++(BrandsAndHistory*)sharedInstance{
+    static BrandsAndHistory * _sharedInstance = nil;
+    
+    static dispatch_once_t oncePredicate;
+    
+    dispatch_once(&oncePredicate,^{
+        _sharedInstance = [[BrandsAndHistory alloc] init];
+    });
+    
+    return _sharedInstance;
+}
+
+
+@end

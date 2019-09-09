@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -242,50 +243,65 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="HisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisroryHisrory" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-Ot-Jpt">
-                                <rect key="frame" x="7" y="253" width="359" height="75"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hzK-0n-xmq">
-                                <rect key="frame" x="168" y="633" width="194" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honda" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-2C-w2x">
+                                <rect key="frame" x="97" y="72" width="181" height="89"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hzK-0n-xmq">
+                                <rect key="frame" x="168" y="640" width="194" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr4-TN-75d">
-                                        <rect key="frame" x="0.0" y="0.0" width="137" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SK8-c6-ZKg">
-                                        <rect key="frame" x="145" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="145" y="0.0" width="51" height="24"/>
                                         <connections>
                                             <action selector="SwitchChanged:" destination="HE9-lF-bRC" eventType="valueChanged" id="JfG-GM-9aP"/>
                                         </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="honda" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-2C-w2x">
-                                <rect key="frame" x="76" y="72" width="222" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3F-zP-GWB">
+                                <rect key="frame" x="4" y="416" width="367" height="216"/>
+                                <color key="backgroundColor" red="0.92311664587402709" green="0.98635389737763834" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-Ot-Jpt">
+                                <rect key="frame" x="4" y="171" width="367" height="201"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Honda Motor Company, Ltd. (Japanese: 本田技研工業株式会社 Hepburn: Honda Giken Kōgyō KK, IPA: [honda] (About this soundlisten); /ˈhɒndə/) is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, motorcycles, and power equipment. Honda has been the world's largest motorcycle manufacturer since 1959,[2][3] as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year.[4] Honda became the second-largest Japanese automobile manufacturer in 2001.[5][6] Honda was the eighth largest automobile manufacturer in the world in 2015.[7]
+
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hzK-0n-xmq" secondAttribute="trailing" constant="13" id="1nG-eB-E0H"/>
                             <constraint firstAttribute="trailing" secondItem="jAH-Dm-y5k" secondAttribute="trailing" constant="27" id="2Tb-Mc-w3C"/>
-                            <constraint firstAttribute="trailing" secondItem="Qot-Ot-Jpt" secondAttribute="trailing" constant="9" id="CeX-bu-NG6"/>
+                            <constraint firstAttribute="trailing" secondItem="o3F-zP-GWB" secondAttribute="trailing" constant="4" id="BBr-d0-9Ql"/>
                             <constraint firstItem="jAH-Dm-y5k" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="27" id="FnS-T8-JtX"/>
-                            <constraint firstItem="jAH-Dm-y5k" firstAttribute="top" secondItem="Qot-Ot-Jpt" secondAttribute="bottom" constant="59" id="Nec-Lj-aLz"/>
+                            <constraint firstItem="jAH-Dm-y5k" firstAttribute="top" secondItem="Qot-Ot-Jpt" secondAttribute="bottom" constant="15" id="J8W-RD-Zl5"/>
+                            <constraint firstItem="o3F-zP-GWB" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="4" id="K7w-bm-Dml"/>
+                            <constraint firstAttribute="trailing" secondItem="Qot-Ot-Jpt" secondAttribute="trailing" constant="4" id="LDE-vU-s8C"/>
+                            <constraint firstItem="hzK-0n-xmq" firstAttribute="top" secondItem="o3F-zP-GWB" secondAttribute="bottom" constant="8" id="NoM-ex-kom"/>
                             <constraint firstItem="hzK-0n-xmq" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="168" id="QvI-Bw-xOm"/>
-                            <constraint firstItem="zPl-iE-r6H" firstAttribute="top" secondItem="Qot-Ot-Jpt" secondAttribute="bottom" constant="339" id="U8X-sl-QAd"/>
+                            <constraint firstItem="KMq-2C-w2x" firstAttribute="top" secondItem="w4M-4K-iPy" secondAttribute="bottom" constant="8" id="SFF-N0-RMw"/>
+                            <constraint firstItem="KMq-2C-w2x" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="97" id="UG2-PI-YHp"/>
+                            <constraint firstAttribute="trailing" secondItem="KMq-2C-w2x" secondAttribute="trailing" constant="97" id="XkC-sP-1Rw"/>
+                            <constraint firstItem="o3F-zP-GWB" firstAttribute="top" secondItem="jAH-Dm-y5k" secondAttribute="bottom" constant="7.5" id="bVb-IN-rJt"/>
+                            <constraint firstItem="hzK-0n-xmq" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="479" id="dFA-kQ-PJU"/>
+                            <constraint firstItem="Qot-Ot-Jpt" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="4" id="eIs-5u-UkS"/>
                             <constraint firstItem="zPl-iE-r6H" firstAttribute="top" secondItem="hzK-0n-xmq" secondAttribute="bottom" constant="3" id="nZh-Lq-fUt"/>
-                            <constraint firstItem="Qot-Ot-Jpt" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="7" id="yRX-Y9-W6u"/>
+                            <constraint firstItem="Qot-Ot-Jpt" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="10" id="pJG-4M-ECF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="DarkModelLabel" destination="dr4-TN-75d" id="nFA-xr-Ruz"/>
                         <outlet property="SwitchButton" destination="SK8-c6-ZKg" id="2s7-KI-eP8"/>
+                        <outlet property="brandPicker" destination="o3F-zP-GWB" id="Yaj-So-IUS"/>
                         <outlet property="brandView" destination="KMq-2C-w2x" id="Xlw-Pf-qrg"/>
                         <outlet property="historyText" destination="Qot-Ot-Jpt" id="JEc-Tj-ecT"/>
                         <outlet property="titleLabel" destination="jAH-Dm-y5k" id="oxH-81-FyR"/>

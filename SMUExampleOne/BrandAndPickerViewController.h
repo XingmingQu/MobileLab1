@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BrandAndPickerViewController : UIViewController
-
+//@property (strong,nonatomic) NSDictionary* BrandNameToIndex;
 @end
 
 NS_ASSUME_NONNULL_END

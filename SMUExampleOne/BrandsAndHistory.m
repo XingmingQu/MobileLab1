@@ -16,6 +16,23 @@
     return content;
 }
 
+
+
+//-(NSDictionary*)BrandNameToIndex{
+//    // initialization
+//    if (!_BrandNameToIndex)
+//    {
+//        _BrandNameToIndex =  @{@"Honda": @"0",
+//                               @"BMW": @"1",
+//                               @"Ford": @"2",
+//                               @"Ferrari": @"3",
+//                               @"Audi": @"4",
+//                               @"Lamborghini": @"5"};
+//    }
+//    return _BrandNameToIndex;
+//}
+
+
 -(NSArray*)BrandNames{
     
 
@@ -34,7 +51,7 @@
 //        NSString *path = [[NSBundle mainBundle] pathForResource:@"hondaHistory" ofType:@"txt"];
 //        NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 //        
-    NSLog(@"%lu",(unsigned long)_BrandNames.count);
+//    NSLog(@"%lu",(unsigned long)_BrandNames.count);
 
     return _BrandNames;
 }
@@ -45,10 +62,10 @@
     if(!_BrandHistory)
         _BrandHistory= @[[self getTxtContent:@"hondaHistory"],
                         [self getTxtContent:@"BMWHistory"],
-                        @"Ford",
-                        @"Ferrari",
-                        @"Audi",
-                        @"Lamborghini"];
+                        [self getTxtContent:@"FordHistory"],
+                        [self getTxtContent:@"FerrariHistory"],
+                        [self getTxtContent:@"AudiHistory"],
+                        [self getTxtContent:@"LamborghiniHistory"]];
     
     return _BrandHistory;
 }

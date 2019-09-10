@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong,nonatomic) NSArray* BrandNames;
 @property (strong,nonatomic) NSArray* BrandHistory;
-
+@property (strong,nonatomic) NSDictionary* BrandNameToIndex;
 -(NSString*)getTxtContent:(NSString*)fileName;
 +(BrandsAndHistory*) sharedInstance;
 

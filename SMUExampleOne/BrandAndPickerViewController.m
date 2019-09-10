@@ -43,7 +43,6 @@ NSArray *pickerData;
 //    NSLog(@"%@",ss);
     
     pickerData = [BrandsAndHistory sharedInstance].BrandNames;
-
     self.brandPicker.dataSource = self;
     self.brandPicker.delegate = self;
 }
@@ -86,23 +85,22 @@ NSArray *pickerData;
     return [pickerData objectAtIndex:row];
 }
 
-//- (IBAction)SegIndexChanged:(UISegmentedControl *)sender {
-//    switch (sender.selectedSegmentIndex) {
-//    case 0:
-////        NSLog(@"@000");
-//            self.view.backgroundColor = [UIColor whiteColor];
-//            _historyText.backgroundColor =[UIColor whiteColor];
-//            _brandView.backgroundColor =[UIColor whiteColor];
-//            break;
-//    case 1:
-////        NSLog(@"@1111");
-//            self.view.backgroundColor = [UIColor lightGrayColor];
-//            _historyText.backgroundColor = [UIColor lightGrayColor];
-//            _brandView.backgroundColor =[UIColor lightGrayColor];
-//            break;
-//    }
-//
-//}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    [self.historyText setContentOffset:CGPointMake(0, 0) animated:YES];
+    self.historyText.text = [BrandsAndHistory sharedInstance].BrandHistory[row];
+    [self.historyText setContentOffset:CGPointMake(0, 0) animated:YES];
+
+    NSString *logoImageName = [BrandsAndHistory sharedInstance].BrandNames[row];
+    logoImageName = [logoImageName stringByAppendingString:@"_ic"];
+//    NSLog(@"%@",logoImageName);
+//    UIImage* image = [UIImage imageNamed:logoImageName];
+    UIImage* image = nil;
+    image = [UIImage imageNamed:logoImageName];
+    self.brandView.image = image;
+
+//    self.historyText.scrollsToTop = true;
+//    [[UIImageView alloc] initWithImage:image];
+}
 
 /*
  #pragma mark - Navigation

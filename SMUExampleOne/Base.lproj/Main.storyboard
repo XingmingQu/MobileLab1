@@ -243,7 +243,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honda" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-2C-w2x">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Honda_ic" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-2C-w2x">
                                 <rect key="frame" x="97" y="72" width="181" height="89"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hzK-0n-xmq">
@@ -268,7 +268,7 @@
                                 <color key="backgroundColor" red="0.92311664587402709" green="0.98635389737763834" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-Ot-Jpt">
-                                <rect key="frame" x="4" y="171" width="367" height="201"/>
+                                <rect key="frame" x="4" y="166" width="367" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <mutableString key="text">Honda Motor Company, Ltd. (Japanese: 本田技研工業株式会社 Hepburn: Honda Giken Kōgyō KK, IPA: [honda] (About this soundlisten); /ˈhɒndə/) is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, motorcycles, and power equipment. Honda has been the world's largest motorcycle manufacturer since 1959,[2][3] as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year.[4] Honda became the second-largest Japanese automobile manufacturer in 2001.[5][6] Honda was the eighth largest automobile manufacturer in the world in 2015.[7]
 
@@ -295,7 +295,7 @@
                             <constraint firstItem="hzK-0n-xmq" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="479" id="dFA-kQ-PJU"/>
                             <constraint firstItem="Qot-Ot-Jpt" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="4" id="eIs-5u-UkS"/>
                             <constraint firstItem="zPl-iE-r6H" firstAttribute="top" secondItem="hzK-0n-xmq" secondAttribute="bottom" constant="3" id="nZh-Lq-fUt"/>
-                            <constraint firstItem="Qot-Ot-Jpt" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="10" id="pJG-4M-ECF"/>
+                            <constraint firstItem="Qot-Ot-Jpt" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="5" id="pJG-4M-ECF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -396,7 +396,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="honda" id="ASl-Nb-xQz">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Honda_ic" id="ASl-Nb-xQz">
                                             <rect key="frame" x="16" y="0.0" width="44" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -439,7 +439,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="honda" width="225" height="225"/>
+        <image name="Honda_ic" width="225" height="225"/>
         <image name="icons8-car-40" width="40" height="40"/>
         <image name="icons8-grid-view-30" width="30" height="30"/>
     </resources>

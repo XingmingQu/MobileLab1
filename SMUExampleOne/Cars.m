@@ -16,7 +16,8 @@
     // initialization
     if (!_ImageNameToIndex)
     {
-        _ImageNameToIndex =  @{@"Civic Type R": @"0", @"M4": @"1",
+        _ImageNameToIndex =  @{@"Civic Type R": @"0",
+                               @"M4": @"1",
                                @"Mustang Bullitt": @"2",
                                @"Ferrari 458 Italia": @"3",
                                @"Audi RS 5": @"4",

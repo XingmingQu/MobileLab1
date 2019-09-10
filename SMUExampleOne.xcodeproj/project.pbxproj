@@ -11,11 +11,12 @@
 		8235CDC72326AFD50005E07B /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC62326AFD40005E07B /* ImageModel.m */; };
 		8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */; };
 		8235CDCD2326F68B0005E07B /* BrandsAndHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDCC2326F68B0005E07B /* BrandsAndHistory.m */; };
-		8235CDD32327064E0005E07B /* BMWHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDD22327064E0005E07B /* BMWHistory.txt */; };
-		8235CDD8232712320005E07B /* FerrariHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDD4232712310005E07B /* FerrariHistory.txt */; };
-		8235CDD9232712320005E07B /* LamborghiniHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDD5232712310005E07B /* LamborghiniHistory.txt */; };
-		8235CDDA232712320005E07B /* FordHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDD6232712320005E07B /* FordHistory.txt */; };
-		8235CDDB232712320005E07B /* AudiHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDD7232712320005E07B /* AudiHistory.txt */; };
+		8235CDE223272EF10005E07B /* hondaHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDDC23272EF00005E07B /* hondaHistory.txt */; };
+		8235CDE323272EF10005E07B /* FerrariHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDDD23272EF00005E07B /* FerrariHistory.txt */; };
+		8235CDE423272EF10005E07B /* LamborghiniHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDDE23272EF00005E07B /* LamborghiniHistory.txt */; };
+		8235CDE523272EF10005E07B /* AudiHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDDF23272EF00005E07B /* AudiHistory.txt */; };
+		8235CDE623272EF10005E07B /* BMWHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE023272EF00005E07B /* BMWHistory.txt */; };
+		8235CDE723272EF10005E07B /* FordHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE123272EF10005E07B /* FordHistory.txt */; };
 		B63FB1F81A709147007921E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1F71A709147007921E4 /* main.m */; };
 		B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FA1A709147007921E4 /* AppDelegate.m */; };
 		B63FB1FE1A709147007921E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FD1A709147007921E4 /* ViewController.m */; };
@@ -46,12 +47,12 @@
 		8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandAndPickerViewController.m; sourceTree = "<group>"; };
 		8235CDCB2326F68B0005E07B /* BrandsAndHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandsAndHistory.h; sourceTree = "<group>"; };
 		8235CDCC2326F68B0005E07B /* BrandsAndHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandsAndHistory.m; sourceTree = "<group>"; };
-		8235CDD12326FBFC0005E07B /* hondaHistory.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hondaHistory.txt; sourceTree = "<group>"; };
-		8235CDD22327064E0005E07B /* BMWHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BMWHistory.txt; path = ../../../../Downloads/phtot/BMWHistory.txt; sourceTree = "<group>"; };
-		8235CDD4232712310005E07B /* FerrariHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FerrariHistory.txt; path = ../../../../Downloads/FerrariHistory.txt; sourceTree = "<group>"; };
-		8235CDD5232712310005E07B /* LamborghiniHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LamborghiniHistory.txt; path = ../../../../Downloads/LamborghiniHistory.txt; sourceTree = "<group>"; };
-		8235CDD6232712320005E07B /* FordHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FordHistory.txt; path = ../../../../Downloads/FordHistory.txt; sourceTree = "<group>"; };
-		8235CDD7232712320005E07B /* AudiHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AudiHistory.txt; path = ../../../../Downloads/AudiHistory.txt; sourceTree = "<group>"; };
+		8235CDDC23272EF00005E07B /* hondaHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hondaHistory.txt; sourceTree = "<group>"; };
+		8235CDDD23272EF00005E07B /* FerrariHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FerrariHistory.txt; sourceTree = "<group>"; };
+		8235CDDE23272EF00005E07B /* LamborghiniHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LamborghiniHistory.txt; sourceTree = "<group>"; };
+		8235CDDF23272EF00005E07B /* AudiHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudiHistory.txt; sourceTree = "<group>"; };
+		8235CDE023272EF00005E07B /* BMWHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BMWHistory.txt; sourceTree = "<group>"; };
+		8235CDE123272EF10005E07B /* FordHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FordHistory.txt; sourceTree = "<group>"; };
 		B63FB1F21A709147007921E4 /* SMUExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMUExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB1F61A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB1F71A709147007921E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,12 +114,6 @@
 		B63FB1F41A709147007921E4 /* SMUExampleOne */ = {
 			isa = PBXGroup;
 			children = (
-				8235CDD7232712320005E07B /* AudiHistory.txt */,
-				8235CDD4232712310005E07B /* FerrariHistory.txt */,
-				8235CDD6232712320005E07B /* FordHistory.txt */,
-				8235CDD5232712310005E07B /* LamborghiniHistory.txt */,
-				8235CDD22327064E0005E07B /* BMWHistory.txt */,
-				8235CDD12326FBFC0005E07B /* hondaHistory.txt */,
 				B63FB1F91A709147007921E4 /* AppDelegate.h */,
 				B63FB1FA1A709147007921E4 /* AppDelegate.m */,
 				B63FB1FC1A709147007921E4 /* ViewController.h */,
@@ -129,6 +124,12 @@
 				8235CDC62326AFD40005E07B /* ImageModel.m */,
 				B63FB1FF1A709147007921E4 /* Main.storyboard */,
 				8235CDC82326D5DF0005E07B /* BrandAndPickerViewController.h */,
+				8235CDDF23272EF00005E07B /* AudiHistory.txt */,
+				8235CDE023272EF00005E07B /* BMWHistory.txt */,
+				8235CDDD23272EF00005E07B /* FerrariHistory.txt */,
+				8235CDE123272EF10005E07B /* FordHistory.txt */,
+				8235CDDC23272EF00005E07B /* hondaHistory.txt */,
+				8235CDDE23272EF00005E07B /* LamborghiniHistory.txt */,
 				8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */,
 				B63FB2241A70C64C007921E4 /* CollectionViewController.h */,
 				B63FB2251A70C64C007921E4 /* CollectionViewController.m */,
@@ -253,14 +254,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8235CDD32327064E0005E07B /* BMWHistory.txt in Resources */,
 				B63FB2011A709147007921E4 /* Main.storyboard in Resources */,
-				8235CDDB232712320005E07B /* AudiHistory.txt in Resources */,
-				8235CDDA232712320005E07B /* FordHistory.txt in Resources */,
 				B63FB2061A709147007921E4 /* LaunchScreen.xib in Resources */,
-				8235CDD8232712320005E07B /* FerrariHistory.txt in Resources */,
-				8235CDD9232712320005E07B /* LamborghiniHistory.txt in Resources */,
+				8235CDE423272EF10005E07B /* LamborghiniHistory.txt in Resources */,
+				8235CDE523272EF10005E07B /* AudiHistory.txt in Resources */,
+				8235CDE623272EF10005E07B /* BMWHistory.txt in Resources */,
+				8235CDE223272EF10005E07B /* hondaHistory.txt in Resources */,
 				B63FB2031A709147007921E4 /* Images.xcassets in Resources */,
+				8235CDE723272EF10005E07B /* FordHistory.txt in Resources */,
+				8235CDE323272EF10005E07B /* FerrariHistory.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

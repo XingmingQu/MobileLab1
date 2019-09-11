@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "ImageModel.h"
 #import "Cars.h"
+#import "ShowDetailsViewController.h"
+
 @interface ViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIImageView* imageView;
@@ -37,6 +39,16 @@
 
 @property (strong,nonatomic) ImageModel* myImageModel;
 @property (strong,nonatomic) Cars* myCarModel;
+
+//Segment control outlets and action
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
+- (IBAction)indexChanged:(UISegmentedControl *)sender;
+
+@property(strong, nonatomic) UIView *detailsView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *segmentScrollView;
 
 @end
 
@@ -146,6 +158,15 @@
     self.scrollView.delegate = self;
     //------------set scrollView's parameter----------------
     
+    //-------------set segmentScrollView parameters---------
+    [self.segmentScrollView addSubview:self.imageView];
+    self.segmentScrollView.contentSize= self.imageView.image.size;
+    self.segmentScrollView.minimumZoomScale = 0.1;
+    self.segmentScrollView.maximumZoomScale = 4;
+    self.segmentScrollView.delegate = self;
+    //------------------------------------------------------
+    
+    
     //------------set labels----------------
     NSString *modelName = @"Model:  ";
     modelName = [modelName stringByAppendingString:[Cars sharedInstance].CarNames[[_imageIndex intValue]]];
@@ -168,7 +189,12 @@
     self.LoanTermLabel.layer.borderWidth = 1;
     //------------set label border----------------
     
+    //-------create the view for segmented control----------------
     
+    _detailsView = [ShowDetailsViewController alloc].view;
+    [self.segmentScrollView addSubview:self.detailsView];
+    [self.segmentScrollView bringSubviewToFront:self.imageView];
+    //------------------------------------------------------------
 
     //set timer
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeLabelColor) userInfo:nil repeats:(YES)];
@@ -193,4 +219,31 @@
 //    self.EMPLabel.text = EMPValue;
     [self setEMPlabelValue];
 }
+- (IBAction)indexChanged:(UISegmentedControl *)sender {
+    
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            [self.detailsView setHidden:YES];
+            [self.imageView setHidden:NO];
+            break;
+        case 1:
+            [self.imageView setHidden:YES];
+            [self.detailsView setHidden:NO];
+            break;
+        default:
+            
+            break;
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    BOOL isVC = [[segue destinationViewController] isKindOfClass:[ViewController class]];
+    if(isVC){
+        ViewController *vc = [segue destinationViewController];
+        
+        vc.imageName = self.imageName;
+    }
+}
+
 @end

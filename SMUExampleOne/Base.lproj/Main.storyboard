@@ -116,6 +116,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1C5-jS-c2D">
+                                <rect key="frame" x="36" y="592" width="133" height="30"/>
+                                <state key="normal" title="More Details"/>
+                                <connections>
+                                    <segue destination="bDc-0c-U1v" kind="show" id="czp-E5-jkO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93195459897142985" green="0.93195459897142985" blue="0.93195459897142985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -145,10 +152,13 @@
                             <constraint firstItem="vhB-Qq-Qrr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="bEz-h3-iFK"/>
                             <constraint firstItem="3Lh-7v-shJ" firstAttribute="top" secondItem="QkU-t9-djP" secondAttribute="bottom" constant="11" id="bGV-7g-863"/>
                             <constraint firstAttribute="trailing" secondItem="YIu-kP-opl" secondAttribute="trailing" constant="100" id="c9F-ME-COf"/>
+                            <constraint firstItem="HAT-uR-hp9" firstAttribute="top" secondItem="1C5-jS-c2D" secondAttribute="bottom" constant="10" id="g5J-cu-JGR"/>
                             <constraint firstItem="3Lh-7v-shJ" firstAttribute="leading" secondItem="gvG-Lv-Qzd" secondAttribute="trailing" constant="30" id="hGx-VQ-IK4"/>
+                            <constraint firstItem="1C5-jS-c2D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ivV-O9-OfA"/>
                             <constraint firstItem="zhv-yT-4cd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="3" id="kwx-c5-o2s"/>
                             <constraint firstItem="QkU-t9-djP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="lET-DJ-1Yt"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="FmO-DD-RPK" secondAttribute="bottom" constant="453" id="lGM-HP-2ev"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1C5-jS-c2D" secondAttribute="trailing" constant="190" id="nPE-zH-KAV"/>
                             <constraint firstItem="15S-Ar-dJY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="297" id="qAg-H6-xt7"/>
                             <constraint firstItem="vhB-Qq-Qrr" firstAttribute="top" secondItem="zhv-yT-4cd" secondAttribute="bottom" constant="8.5" id="rrD-Xy-9XC"/>
                             <constraint firstAttribute="trailing" secondItem="HAT-uR-hp9" secondAttribute="trailing" constant="50" id="sb5-dL-GY8"/>
@@ -175,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="147"/>
+            <point key="canvasLocation" x="1356" y="146.17691154422789"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="7aF-Zp-s9b">
@@ -225,6 +235,52 @@
             </objects>
             <point key="canvasLocation" x="1356" y="795"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fgz-pa-tZY">
+            <objects>
+                <viewController id="bDc-0c-U1v" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="US3-mO-6Cl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tvy-bC-UUU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="urB-NF-aXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EFx-KW-CP8">
+                                <rect key="frame" x="26" y="84" width="323" height="29"/>
+                                <segments>
+                                    <segment title="Photos"/>
+                                    <segment title="Specifications"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="bDc-0c-U1v" eventType="valueChanged" id="2Z5-6K-6KE"/>
+                                </connections>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-d2-Sdt">
+                                <rect key="frame" x="26" y="127" width="323" height="520"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tvy-bC-UUU" firstAttribute="top" secondItem="vnh-d2-Sdt" secondAttribute="bottom" constant="20" id="3l5-0Q-gSa"/>
+                            <constraint firstItem="EFx-KW-CP8" firstAttribute="top" secondItem="US3-mO-6Cl" secondAttribute="bottom" constant="20" id="6aw-mU-7pY"/>
+                            <constraint firstItem="EFx-KW-CP8" firstAttribute="leading" secondItem="urB-NF-aXM" secondAttribute="leadingMargin" constant="10" id="AFv-BO-fxb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vnh-d2-Sdt" secondAttribute="trailing" constant="10" id="X8h-IQ-Ugh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EFx-KW-CP8" secondAttribute="trailing" constant="10" id="XP1-Nr-ZCZ"/>
+                            <constraint firstItem="vnh-d2-Sdt" firstAttribute="leading" secondItem="urB-NF-aXM" secondAttribute="leadingMargin" constant="10" id="hug-Es-ahB"/>
+                            <constraint firstItem="vnh-d2-Sdt" firstAttribute="top" secondItem="EFx-KW-CP8" secondAttribute="bottom" constant="15" id="s0D-of-Jg8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentScrollView" destination="vnh-d2-Sdt" id="P2J-DQ-Gt3"/>
+                        <outlet property="segmentedControl" destination="EFx-KW-CP8" id="jJ5-Yd-r3C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mp-jN-eH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2230" y="488"/>
+        </scene>
         <!--Brand And Picker View Controller-->
         <scene sceneID="Hhb-wQ-UNq">
             <objects>
@@ -270,9 +326,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-Ot-Jpt">
                                 <rect key="frame" x="4" y="166" width="367" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Honda Motor Company, Ltd. (Japanese: 本田技研工業株式会社 Hepburn: Honda Giken Kōgyō KK, IPA: [honda] (About this soundlisten); /ˈhɒndə/) is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, motorcycles, and power equipment. Honda has been the world's largest motorcycle manufacturer since 1959,[2][3] as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year.[4] Honda became the second-largest Japanese automobile manufacturer in 2001.[5][6] Honda was the eighth largest automobile manufacturer in the world in 2015.[7]
+                                <string key="text">Honda Motor Company, Ltd. (Japanese: 本田技研工業株式会社 Hepburn: Honda Giken Kōgyō KK, IPA: [honda] (About this soundlisten); /ˈhɒndə/) is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, motorcycles, and power equipment. Honda has been the world's largest motorcycle manufacturer since 1959,[2][3] as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year.[4] Honda became the second-largest Japanese automobile manufacturer in 2001.[5][6] Honda was the eighth largest automobile manufacturer in the world in 2015.[7]
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

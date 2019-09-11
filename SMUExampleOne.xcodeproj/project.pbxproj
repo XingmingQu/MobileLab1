@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166F54BE2327563100915E39 /* ShowDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166F54BD2327563100915E39 /* ShowDetailsViewController.m */; };
 		82167D12232476FF00682975 /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 82167D11232476FF00682975 /* Cars.m */; };
 		8235CDC72326AFD50005E07B /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC62326AFD40005E07B /* ImageModel.m */; };
 		8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		166F54BC2327563100915E39 /* ShowDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowDetailsViewController.h; sourceTree = "<group>"; };
+		166F54BD2327563100915E39 /* ShowDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowDetailsViewController.m; sourceTree = "<group>"; };
 		82167D10232476FF00682975 /* Cars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cars.h; sourceTree = "<group>"; };
 		82167D11232476FF00682975 /* Cars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cars.m; sourceTree = "<group>"; };
 		8235CDC62326AFD40005E07B /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				B63FB2281A70C839007921E4 /* CollectionViewCell.m */,
 				B63FB21E1A70969F007921E4 /* TableViewController.h */,
 				B63FB21F1A70969F007921E4 /* TableViewController.m */,
+				166F54BC2327563100915E39 /* ShowDetailsViewController.h */,
+				166F54BD2327563100915E39 /* ShowDetailsViewController.m */,
 				82167D10232476FF00682975 /* Cars.h */,
 				82167D11232476FF00682975 /* Cars.m */,
 				B63FB2021A709147007921E4 /* Images.xcassets */,
@@ -288,6 +293,7 @@
 				8235CDC72326AFD50005E07B /* ImageModel.m in Sources */,
 				B63FB2261A70C64C007921E4 /* CollectionViewController.m in Sources */,
 				B63FB1F81A709147007921E4 /* main.m in Sources */,
+				166F54BE2327563100915E39 /* ShowDetailsViewController.m in Sources */,
 				B63FB2201A70969F007921E4 /* TableViewController.m in Sources */,
 				B63FB2291A70C839007921E4 /* CollectionViewCell.m in Sources */,
 			);

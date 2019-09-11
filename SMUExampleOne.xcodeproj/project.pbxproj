@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		166F54BE2327563100915E39 /* ShowDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166F54BD2327563100915E39 /* ShowDetailsViewController.m */; };
 		82167D12232476FF00682975 /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 82167D11232476FF00682975 /* Cars.m */; };
 		8235CDC72326AFD50005E07B /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC62326AFD40005E07B /* ImageModel.m */; };
 		8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */; };
@@ -18,6 +17,7 @@
 		8235CDE523272EF10005E07B /* AudiHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDDF23272EF00005E07B /* AudiHistory.txt */; };
 		8235CDE623272EF10005E07B /* BMWHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE023272EF00005E07B /* BMWHistory.txt */; };
 		8235CDE723272EF10005E07B /* FordHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE123272EF10005E07B /* FordHistory.txt */; };
+		825969AE23298E5500BBC02D /* moreDetailsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */; };
 		B63FB1F81A709147007921E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1F71A709147007921E4 /* main.m */; };
 		B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FA1A709147007921E4 /* AppDelegate.m */; };
 		B63FB1FE1A709147007921E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FD1A709147007921E4 /* ViewController.m */; };
@@ -41,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		166F54BC2327563100915E39 /* ShowDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowDetailsViewController.h; sourceTree = "<group>"; };
-		166F54BD2327563100915E39 /* ShowDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowDetailsViewController.m; sourceTree = "<group>"; };
 		82167D10232476FF00682975 /* Cars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cars.h; sourceTree = "<group>"; };
 		82167D11232476FF00682975 /* Cars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cars.m; sourceTree = "<group>"; };
 		8235CDC62326AFD40005E07B /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		8235CDDF23272EF00005E07B /* AudiHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudiHistory.txt; sourceTree = "<group>"; };
 		8235CDE023272EF00005E07B /* BMWHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BMWHistory.txt; sourceTree = "<group>"; };
 		8235CDE123272EF10005E07B /* FordHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FordHistory.txt; sourceTree = "<group>"; };
+		825969AC23298E5500BBC02D /* moreDetailsControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moreDetailsControllerViewController.h; sourceTree = "<group>"; };
+		825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moreDetailsControllerViewController.m; sourceTree = "<group>"; };
 		B63FB1F21A709147007921E4 /* SMUExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMUExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB1F61A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB1F71A709147007921E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,6 +117,8 @@
 		B63FB1F41A709147007921E4 /* SMUExampleOne */ = {
 			isa = PBXGroup;
 			children = (
+				825969AC23298E5500BBC02D /* moreDetailsControllerViewController.h */,
+				825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */,
 				B63FB1F91A709147007921E4 /* AppDelegate.h */,
 				B63FB1FA1A709147007921E4 /* AppDelegate.m */,
 				B63FB1FC1A709147007921E4 /* ViewController.h */,
@@ -127,21 +129,19 @@
 				8235CDC62326AFD40005E07B /* ImageModel.m */,
 				B63FB1FF1A709147007921E4 /* Main.storyboard */,
 				8235CDC82326D5DF0005E07B /* BrandAndPickerViewController.h */,
+				8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */,
 				8235CDDF23272EF00005E07B /* AudiHistory.txt */,
 				8235CDE023272EF00005E07B /* BMWHistory.txt */,
 				8235CDDD23272EF00005E07B /* FerrariHistory.txt */,
 				8235CDE123272EF10005E07B /* FordHistory.txt */,
 				8235CDDC23272EF00005E07B /* hondaHistory.txt */,
 				8235CDDE23272EF00005E07B /* LamborghiniHistory.txt */,
-				8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */,
 				B63FB2241A70C64C007921E4 /* CollectionViewController.h */,
 				B63FB2251A70C64C007921E4 /* CollectionViewController.m */,
 				B63FB2271A70C839007921E4 /* CollectionViewCell.h */,
 				B63FB2281A70C839007921E4 /* CollectionViewCell.m */,
 				B63FB21E1A70969F007921E4 /* TableViewController.h */,
 				B63FB21F1A70969F007921E4 /* TableViewController.m */,
-				166F54BC2327563100915E39 /* ShowDetailsViewController.h */,
-				166F54BD2327563100915E39 /* ShowDetailsViewController.m */,
 				82167D10232476FF00682975 /* Cars.h */,
 				82167D11232476FF00682975 /* Cars.m */,
 				B63FB2021A709147007921E4 /* Images.xcassets */,
@@ -287,13 +287,13 @@
 			files = (
 				B63FB1FE1A709147007921E4 /* ViewController.m in Sources */,
 				8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */,
+				825969AE23298E5500BBC02D /* moreDetailsControllerViewController.m in Sources */,
 				B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */,
 				82167D12232476FF00682975 /* Cars.m in Sources */,
 				8235CDCD2326F68B0005E07B /* BrandsAndHistory.m in Sources */,
 				8235CDC72326AFD50005E07B /* ImageModel.m in Sources */,
 				B63FB2261A70C64C007921E4 /* CollectionViewController.m in Sources */,
 				B63FB1F81A709147007921E4 /* main.m in Sources */,
-				166F54BE2327563100915E39 /* ShowDetailsViewController.m in Sources */,
 				B63FB2201A70969F007921E4 /* TableViewController.m in Sources */,
 				B63FB2291A70C839007921E4 /* CollectionViewCell.m in Sources */,
 			);

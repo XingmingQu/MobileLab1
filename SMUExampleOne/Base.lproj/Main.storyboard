@@ -120,7 +120,7 @@
                                 <rect key="frame" x="36" y="592" width="133" height="30"/>
                                 <state key="normal" title="More Details"/>
                                 <connections>
-                                    <segue destination="bDc-0c-U1v" kind="show" id="czp-E5-jkO"/>
+                                    <segue destination="bDc-0c-U1v" kind="show" id="XYh-3D-rW4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="1356" y="795"/>
         </scene>
-        <!--View Controller-->
+        <!--More Details Controller View Controller-->
         <scene sceneID="fgz-pa-tZY">
             <objects>
-                <viewController id="bDc-0c-U1v" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="bDc-0c-U1v" customClass="moreDetailsControllerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="US3-mO-6Cl"/>
                         <viewControllerLayoutGuide type="bottom" id="Tvy-bC-UUU"/>
@@ -254,7 +254,7 @@
                                     <segment title="Specifications"/>
                                 </segments>
                                 <connections>
-                                    <action selector="indexChanged:" destination="bDc-0c-U1v" eventType="valueChanged" id="2Z5-6K-6KE"/>
+                                    <action selector="indexChanged:" destination="bDc-0c-U1v" eventType="valueChanged" id="u3x-55-xHT"/>
                                 </connections>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-d2-Sdt">
@@ -273,8 +273,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="segmentScrollView" destination="vnh-d2-Sdt" id="P2J-DQ-Gt3"/>
-                        <outlet property="segmentedControl" destination="EFx-KW-CP8" id="jJ5-Yd-r3C"/>
+                        <outlet property="segmentScrollView" destination="vnh-d2-Sdt" id="mHc-tr-9uh"/>
+                        <outlet property="segmentedControl" destination="EFx-KW-CP8" id="yhj-DM-ghr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mp-jN-eH0" userLabel="First Responder" sceneMemberID="firstResponder"/>

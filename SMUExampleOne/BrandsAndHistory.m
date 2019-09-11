@@ -70,6 +70,18 @@
     return _BrandHistory;
 }
 
+-(NSArray*)Specs{
+    
+    if(!_Specs)
+        _Specs= @[[self getTxtContent:@"civicS"],
+                         [self getTxtContent:@"LamborghiniHistory"],
+                         [self getTxtContent:@"civicS"],
+                         [self getTxtContent:@"civicS"],
+                         [self getTxtContent:@"civicS"],
+                         [self getTxtContent:@"civicS"]];
+    
+    return _Specs;
+}
 
 +(BrandsAndHistory*)sharedInstance{
     static BrandsAndHistory * _sharedInstance = nil;

@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface BrandsAndHistory : NSObject
 
+@property (strong,nonatomic) NSArray* Specs;
 @property (strong,nonatomic) NSArray* BrandNames;
 @property (strong,nonatomic) NSArray* BrandHistory;
 @property (strong,nonatomic) NSDictionary* BrandNameToIndex;

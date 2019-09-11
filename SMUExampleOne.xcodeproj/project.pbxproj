@@ -18,6 +18,7 @@
 		8235CDE623272EF10005E07B /* BMWHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE023272EF00005E07B /* BMWHistory.txt */; };
 		8235CDE723272EF10005E07B /* FordHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE123272EF10005E07B /* FordHistory.txt */; };
 		825969AE23298E5500BBC02D /* moreDetailsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */; };
+		825969B023299E7300BBC02D /* civicS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 825969AF23299E7300BBC02D /* civicS.txt */; };
 		B63FB1F81A709147007921E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1F71A709147007921E4 /* main.m */; };
 		B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FA1A709147007921E4 /* AppDelegate.m */; };
 		B63FB1FE1A709147007921E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FD1A709147007921E4 /* ViewController.m */; };
@@ -56,6 +57,7 @@
 		8235CDE123272EF10005E07B /* FordHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FordHistory.txt; sourceTree = "<group>"; };
 		825969AC23298E5500BBC02D /* moreDetailsControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moreDetailsControllerViewController.h; sourceTree = "<group>"; };
 		825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moreDetailsControllerViewController.m; sourceTree = "<group>"; };
+		825969AF23299E7300BBC02D /* civicS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = civicS.txt; sourceTree = "<group>"; };
 		B63FB1F21A709147007921E4 /* SMUExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMUExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB1F61A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB1F71A709147007921E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */,
 				8235CDDF23272EF00005E07B /* AudiHistory.txt */,
 				8235CDE023272EF00005E07B /* BMWHistory.txt */,
+				825969AF23299E7300BBC02D /* civicS.txt */,
 				8235CDDD23272EF00005E07B /* FerrariHistory.txt */,
 				8235CDE123272EF10005E07B /* FordHistory.txt */,
 				8235CDDC23272EF00005E07B /* hondaHistory.txt */,
@@ -266,6 +269,7 @@
 				8235CDE623272EF10005E07B /* BMWHistory.txt in Resources */,
 				8235CDE223272EF10005E07B /* hondaHistory.txt in Resources */,
 				B63FB2031A709147007921E4 /* Images.xcassets in Resources */,
+				825969B023299E7300BBC02D /* civicS.txt in Resources */,
 				8235CDE723272EF10005E07B /* FordHistory.txt in Resources */,
 				8235CDE323272EF10005E07B /* FerrariHistory.txt in Resources */,
 			);

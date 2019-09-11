@@ -200,12 +200,12 @@
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"in outer part of segue");
+//    NSLog(@"in outer part of segue");
     BOOL isVC = [[segue destinationViewController] isKindOfClass:[UIViewController class]];
     if(isVC){
         moreDetailsControllerViewController *vc = [segue destinationViewController];
-        NSLog(@"in segue");
-        vc.imageName = self.imageName;
+//        NSLog(@"in segue");
+        vc.picName = self.imageName;
 //        UIImageView* temp = [[UIImageView alloc] init];
 //        temp = self.imageView;
 //        vc.imageView = temp;

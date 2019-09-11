@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface moreDetailsControllerViewController : ViewController
 @property (strong, nonatomic) UIImageView* imageView;
-@property (strong, nonatomic) NSString* imageName;
+@property (strong, nonatomic) NSString* picName;
 @property (strong, nonatomic) UIImage* image;
 @end
 

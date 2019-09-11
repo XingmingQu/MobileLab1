@@ -7,7 +7,7 @@
 //
 
 #import "moreDetailsControllerViewController.h"
-
+#import "BrandsAndHistory.h"
 @interface moreDetailsControllerViewController () <UIScrollViewDelegate>
 
 //Segment control outlets and action
@@ -17,21 +17,24 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 - (IBAction)indexChanged:(UISegmentedControl *)sender;
+@property (weak, nonatomic) IBOutlet UITextView *specsTextView;
 
 @property(strong, nonatomic) UIView *detailsView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *segmentScrollView;
-
+@property (strong,nonatomic) BrandsAndHistory* myBrandHistory;
 @end
 
 @implementation moreDetailsControllerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.imageName);
-    
+//    NSLog(@"%@",self.imageName);
+    [self resetSpecs];
     //    _imageView = [[UIImageView alloc] initWithImage:[[ImageModel sharedInstance] getImageWithName:self.imageName]];
     _imageView = [[UIImageView alloc] initWithImage:self.image];
+    _imageView.contentMode = UIViewContentModeScaleAspectFill;
+    _imageView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     //-------------set segmentScrollView parameters---------
     [self.segmentScrollView addSubview:self.imageView];
     self.segmentScrollView.contentSize= self.imageView.image.size;
@@ -67,6 +70,35 @@
             break;
     }
 }
+
+-(void)resetSpecs{
+    if ([self.picName isEqualToString:@"civic"])
+    {
+        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[0];
+    }
+    else if ([self.picName isEqualToString:@"bmw"])
+    {
+        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[1];
+    }
+    else if ([self.picName isEqualToString:@"mustang"])
+    {
+        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[2];
+    }
+    else if ([self.picName isEqualToString:@"ferr"])
+    {
+        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[3];
+    }
+    else if ([self.picName isEqualToString:@"RS5"])
+    {
+        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[4];
+    }
+    else if ([self.picName isEqualToString:@"lambo"])
+    {
+        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[5];
+    }
+
+}
+
 /*
  #pragma mark - Navigation
  

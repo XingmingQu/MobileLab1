@@ -10,8 +10,9 @@
 #import "ImageModel.h"
 #import "Cars.h"
 #import "moreDetailsControllerViewController.h"
+#import "popUpViewController.h"
 
-@interface ViewController () <UIScrollViewDelegate>
+@interface ViewController () <UIScrollViewDelegate,popUpViewControllerDelegate>
 
 @property (strong, nonatomic) UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -46,6 +47,18 @@
 
 @implementation ViewController
 
+-(void)sendZipBack:(NSString *)message{
+    self.jumpToWebButton.hidden = false;
+    NSLog(@"%@",message);
+    [_jumpToWebButton setTitle:[NSString stringWithFormat:@"Search Dealers near %@",message] forState:(UIControlStateNormal)];
+//    [self.jumpToWebButton setTitle:[NSString stringWithFormat:@"Search Dealers near %@",message]];
+}
+
+- (IBAction)goToPopUpVC:(id)sender {
+    popUpViewController *popUpVC = [self.storyboard instantiateViewControllerWithIdentifier:@"popUpViewController"];
+    popUpVC.delegate = self;
+    [self presentViewController:popUpVC animated:YES completion:nil];
+}
 
 -(void)setEMPlabelValue{
     

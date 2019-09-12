@@ -10,6 +10,7 @@
 
 @interface popUpViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *enterZipTextField;
 
 @end
 
@@ -21,6 +22,8 @@
 }
 
 - (IBAction)closePopUp:(UIButton *)sender {
+    
+    [self.delegate sendZipBack:_enterZipTextField.text];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

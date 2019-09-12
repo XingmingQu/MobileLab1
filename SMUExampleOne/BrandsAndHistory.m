@@ -74,11 +74,11 @@
     
     if(!_Specs)
         _Specs= @[[self getTxtContent:@"civicS"],
-                         [self getTxtContent:@"LamborghiniHistory"],
-                         [self getTxtContent:@"civicS"],
-                         [self getTxtContent:@"civicS"],
-                         [self getTxtContent:@"civicS"],
-                         [self getTxtContent:@"civicS"]];
+                         [self getTxtContent:@"M4S"],
+                         [self getTxtContent:@"mustang"],
+                         [self getTxtContent:@"ferrari"],
+                         [self getTxtContent:@"audi"],
+                         [self getTxtContent:@"lambo"]];
     
     return _Specs;
 }

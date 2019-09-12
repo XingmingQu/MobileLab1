@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1356" y="795"/>
         </scene>
-        <!--View Controller-->
+        <!--Pop Up View Controller-->
         <scene sceneID="bbh-Pg-Ktn">
             <objects>
-                <viewController id="R1p-k4-nO0" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="R1p-k4-nO0" customClass="popUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8FA-Ux-85f"/>
                         <viewControllerLayoutGuide type="bottom" id="jen-jN-478"/>
@@ -273,13 +273,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcI-Fe-U3M">
+                                <rect key="frame" x="172" y="375" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="closePopUp:" destination="R1p-k4-nO0" eventType="touchUpInside" id="2Mp-to-phv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GZd-ja-7KI" firstAttribute="top" secondItem="8FA-Ux-85f" secondAttribute="bottom" constant="279" id="8pW-Dj-3cq"/>
                             <constraint firstItem="1D0-89-JgO" firstAttribute="top" secondItem="GZd-ja-7KI" secondAttribute="bottom" constant="17" id="JvW-1Z-phn"/>
                             <constraint firstItem="GZd-ja-7KI" firstAttribute="leading" secondItem="kuw-lU-ICF" secondAttribute="leadingMargin" constant="82" id="KlX-l4-BcY"/>
+                            <constraint firstItem="rcI-Fe-U3M" firstAttribute="centerX" secondItem="1D0-89-JgO" secondAttribute="centerX" id="Mk9-KK-8v8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GZd-ja-7KI" secondAttribute="trailing" constant="83" id="Se6-wm-vGw"/>
+                            <constraint firstItem="rcI-Fe-U3M" firstAttribute="top" secondItem="1D0-89-JgO" secondAttribute="bottom" constant="8" symbolic="YES" id="WhS-7N-UOw"/>
                             <constraint firstItem="GZd-ja-7KI" firstAttribute="trailing" secondItem="1D0-89-JgO" secondAttribute="trailing" id="tEQ-Pj-PeH"/>
                             <constraint firstItem="GZd-ja-7KI" firstAttribute="leading" secondItem="1D0-89-JgO" secondAttribute="leading" id="vLR-Am-xjP"/>
                         </constraints>

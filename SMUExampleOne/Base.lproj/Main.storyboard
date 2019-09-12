@@ -260,9 +260,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-d2-Sdt">
                                 <rect key="frame" x="26" y="127" width="323" height="520"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-6N-XUZ">
-                                        <rect key="frame" x="41" y="115" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-6N-XUZ">
+                                        <rect key="frame" x="8" y="17" width="307" height="226"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -276,10 +275,14 @@
                             <constraint firstItem="Tvy-bC-UUU" firstAttribute="top" secondItem="vnh-d2-Sdt" secondAttribute="bottom" constant="20" id="3l5-0Q-gSa"/>
                             <constraint firstItem="EFx-KW-CP8" firstAttribute="top" secondItem="US3-mO-6Cl" secondAttribute="bottom" constant="20" id="6aw-mU-7pY"/>
                             <constraint firstItem="EFx-KW-CP8" firstAttribute="leading" secondItem="urB-NF-aXM" secondAttribute="leadingMargin" constant="10" id="AFv-BO-fxb"/>
+                            <constraint firstItem="Tvy-bC-UUU" firstAttribute="top" secondItem="6qj-6N-XUZ" secondAttribute="bottom" constant="297" id="MfY-NF-FZV"/>
+                            <constraint firstAttribute="trailing" secondItem="6qj-6N-XUZ" secondAttribute="trailing" constant="34" id="NJb-Mc-5fy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vnh-d2-Sdt" secondAttribute="trailing" constant="10" id="X8h-IQ-Ugh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EFx-KW-CP8" secondAttribute="trailing" constant="10" id="XP1-Nr-ZCZ"/>
+                            <constraint firstItem="6qj-6N-XUZ" firstAttribute="leading" secondItem="urB-NF-aXM" secondAttribute="leading" constant="34" id="ckI-ZX-mO7"/>
                             <constraint firstItem="vnh-d2-Sdt" firstAttribute="leading" secondItem="urB-NF-aXM" secondAttribute="leadingMargin" constant="10" id="hug-Es-ahB"/>
                             <constraint firstItem="vnh-d2-Sdt" firstAttribute="top" secondItem="EFx-KW-CP8" secondAttribute="bottom" constant="15" id="s0D-of-Jg8"/>
+                            <constraint firstItem="6qj-6N-XUZ" firstAttribute="top" secondItem="EFx-KW-CP8" secondAttribute="bottom" constant="32" id="udl-es-crs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -290,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mp-jN-eH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="488"/>
+            <point key="canvasLocation" x="2229.5999999999999" y="487.10644677661173"/>
         </scene>
         <!--Brand And Picker View Controller-->
         <scene sceneID="Hhb-wQ-UNq">

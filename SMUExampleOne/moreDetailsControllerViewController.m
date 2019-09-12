@@ -30,7 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    NSLog(@"%@",self.imageName);
+    self.specsTextView.hidden = true;
     [self resetSpecs];
+    
     //    _imageView = [[UIImageView alloc] initWithImage:[[ImageModel sharedInstance] getImageWithName:self.imageName]];
     _imageView = [[UIImageView alloc] initWithImage:self.image];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -58,10 +60,12 @@
     switch (self.segmentedControl.selectedSegmentIndex)
     {
         case 0:
+            self.specsTextView.hidden = true;
             [self.detailsView setHidden:YES];
             [self.imageView setHidden:NO];
             break;
         case 1:
+            self.specsTextView.hidden = false;
             [self.imageView setHidden:YES];
             [self.detailsView setHidden:NO];
             break;

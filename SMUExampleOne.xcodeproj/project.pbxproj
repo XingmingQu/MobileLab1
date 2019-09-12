@@ -98,6 +98,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		821F43082329DFD90090E9FB /* txttFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8235CDDF23272EF00005E07B /* AudiHistory.txt */,
+				8235CDE023272EF00005E07B /* BMWHistory.txt */,
+				825969AF23299E7300BBC02D /* civicS.txt */,
+				8235CDDD23272EF00005E07B /* FerrariHistory.txt */,
+				8235CDE123272EF10005E07B /* FordHistory.txt */,
+				8235CDDC23272EF00005E07B /* hondaHistory.txt */,
+				8235CDDE23272EF00005E07B /* LamborghiniHistory.txt */,
+			);
+			name = txttFiles;
+			sourceTree = "<group>";
+		};
 		B63FB1E91A709147007921E4 = {
 			isa = PBXGroup;
 			children = (
@@ -132,13 +146,7 @@
 				B63FB1FF1A709147007921E4 /* Main.storyboard */,
 				8235CDC82326D5DF0005E07B /* BrandAndPickerViewController.h */,
 				8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */,
-				8235CDDF23272EF00005E07B /* AudiHistory.txt */,
-				8235CDE023272EF00005E07B /* BMWHistory.txt */,
-				825969AF23299E7300BBC02D /* civicS.txt */,
-				8235CDDD23272EF00005E07B /* FerrariHistory.txt */,
-				8235CDE123272EF10005E07B /* FordHistory.txt */,
-				8235CDDC23272EF00005E07B /* hondaHistory.txt */,
-				8235CDDE23272EF00005E07B /* LamborghiniHistory.txt */,
+				821F43082329DFD90090E9FB /* txttFiles */,
 				B63FB2241A70C64C007921E4 /* CollectionViewController.h */,
 				B63FB2251A70C64C007921E4 /* CollectionViewController.m */,
 				B63FB2271A70C839007921E4 /* CollectionViewCell.h */,

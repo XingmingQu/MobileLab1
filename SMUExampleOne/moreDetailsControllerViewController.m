@@ -72,30 +72,8 @@
 }
 
 -(void)resetSpecs{
-    if ([self.picName isEqualToString:@"civic"])
-    {
-        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[0];
-    }
-    else if ([self.picName isEqualToString:@"bmw"])
-    {
-        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[1];
-    }
-    else if ([self.picName isEqualToString:@"mustang"])
-    {
-        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[2];
-    }
-    else if ([self.picName isEqualToString:@"ferr"])
-    {
-        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[3];
-    }
-    else if ([self.picName isEqualToString:@"RS5"])
-    {
-        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[4];
-    }
-    else if ([self.picName isEqualToString:@"lambo"])
-    {
-        self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[5];
-    }
+//    NSLog(@"%@",_picIndex);
+    self.specsTextView.text = [BrandsAndHistory sharedInstance].Specs[[_picIndex intValue]];
 
 }
 

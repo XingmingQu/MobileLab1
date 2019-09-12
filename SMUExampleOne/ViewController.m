@@ -205,7 +205,7 @@
     if(isVC){
         moreDetailsControllerViewController *vc = [segue destinationViewController];
 //        NSLog(@"in segue");
-        vc.picName = self.imageName;
+        vc.picIndex = self.imageIndex;
 //        UIImageView* temp = [[UIImageView alloc] init];
 //        temp = self.imageView;
 //        vc.imageView = temp;

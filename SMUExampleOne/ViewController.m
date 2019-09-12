@@ -17,7 +17,7 @@
 @property (strong, nonatomic) UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-@property (weak, nonatomic) IBOutlet UILabel *ModelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *modelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ColorLabel;
@@ -49,7 +49,8 @@
 
 -(void)sendZipBack:(NSString *)message{
     self.jumpToWebButton.hidden = false;
-    NSLog(@"%@",message);
+//    NSLog(@"%@",message);
+    _zipCode = message;
     [_jumpToWebButton setTitle:[NSString stringWithFormat:@"Search Dealers near %@",message] forState:(UIControlStateNormal)];
 //    [self.jumpToWebButton setTitle:[NSString stringWithFormat:@"Search Dealers near %@",message]];
 }
@@ -78,7 +79,11 @@
 
 
 - (IBAction)JumpToWeb:(UIButton *)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.cars.com"]];
+    NSString *Make = [Cars sharedInstance].CarBrands[[_imageIndex intValue]];
+    NSString *URL = [NSString stringWithFormat:@"https://www.google.com/maps/search/%@+%@", _zipCode,Make];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:URL]];
+//    NSLog(@"%@",URL);
+//    NSLog(@"%@",Make);
 }
 
 - (IBAction)sliderValueChanged:(UISlider *)sender {
@@ -173,7 +178,7 @@
     NSString *Price = @"Price:  $ ";
     Price = [Price stringByAppendingString:[Cars sharedInstance].CarPrices[[_imageIndex intValue]]];
     
-    self.ModelLabel.text = modelName;
+    self.modelLabel.text = modelName;
     self.MakeLabel.text = MakeName;
     self.PriceLabel.text = Price;
     [self setEMPlabelValue];

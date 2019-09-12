@@ -188,10 +188,10 @@
                         <outlet property="EMPLabel" destination="YIu-kP-opl" id="Qk5-nh-x3Y"/>
                         <outlet property="LoanTermLabel" destination="gLu-wc-2hj" id="btK-Pj-k2b"/>
                         <outlet property="MakeLabel" destination="LP9-hj-h1N" id="6Mw-uw-6fq"/>
-                        <outlet property="ModelLabel" destination="Jac-hv-Ydh" id="6yX-eI-Oy8"/>
                         <outlet property="PriceLabel" destination="m5a-bM-fKF" id="otX-Xm-Lbg"/>
                         <outlet property="inputZipButton" destination="wCP-9D-9qd" id="giI-gw-z0N"/>
                         <outlet property="jumpToWebButton" destination="HAT-uR-hp9" id="rhu-7p-hdI"/>
+                        <outlet property="modelLabel" destination="Jac-hv-Ydh" id="6yX-eI-Oy8"/>
                         <outlet property="monthSteper" destination="3Lh-7v-shJ" id="AYm-te-3hi"/>
                         <outlet property="scrollView" destination="FmO-DD-RPK" id="WCH-1u-VeT"/>
                     </connections>

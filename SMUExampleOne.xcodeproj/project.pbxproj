@@ -19,6 +19,7 @@
 		8235CDE723272EF10005E07B /* FordHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE123272EF10005E07B /* FordHistory.txt */; };
 		825969AE23298E5500BBC02D /* moreDetailsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */; };
 		825969B023299E7300BBC02D /* civicS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 825969AF23299E7300BBC02D /* civicS.txt */; };
+		82FE232A2329F1130075F776 /* popUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE23292329F1130075F776 /* popUpViewController.m */; };
 		B63FB1F81A709147007921E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1F71A709147007921E4 /* main.m */; };
 		B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FA1A709147007921E4 /* AppDelegate.m */; };
 		B63FB1FE1A709147007921E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FB1FD1A709147007921E4 /* ViewController.m */; };
@@ -58,6 +59,8 @@
 		825969AC23298E5500BBC02D /* moreDetailsControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moreDetailsControllerViewController.h; sourceTree = "<group>"; };
 		825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moreDetailsControllerViewController.m; sourceTree = "<group>"; };
 		825969AF23299E7300BBC02D /* civicS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = civicS.txt; sourceTree = "<group>"; };
+		82FE23282329F1130075F776 /* popUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = popUpViewController.h; sourceTree = "<group>"; };
+		82FE23292329F1130075F776 /* popUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = popUpViewController.m; sourceTree = "<group>"; };
 		B63FB1F21A709147007921E4 /* SMUExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMUExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB1F61A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB1F71A709147007921E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				B63FB21B1A7091A6007921E4 /* ImageModel.h */,
 				8235CDC62326AFD40005E07B /* ImageModel.m */,
 				B63FB1FF1A709147007921E4 /* Main.storyboard */,
+				82FE23282329F1130075F776 /* popUpViewController.h */,
+				82FE23292329F1130075F776 /* popUpViewController.m */,
 				8235CDC82326D5DF0005E07B /* BrandAndPickerViewController.h */,
 				8235CDC92326D5DF0005E07B /* BrandAndPickerViewController.m */,
 				821F43082329DFD90090E9FB /* txttFiles */,
@@ -304,6 +309,7 @@
 				82167D12232476FF00682975 /* Cars.m in Sources */,
 				8235CDCD2326F68B0005E07B /* BrandsAndHistory.m in Sources */,
 				8235CDC72326AFD50005E07B /* ImageModel.m in Sources */,
+				82FE232A2329F1130075F776 /* popUpViewController.m in Sources */,
 				B63FB2261A70C64C007921E4 /* CollectionViewController.m in Sources */,
 				B63FB1F81A709147007921E4 /* main.m in Sources */,
 				B63FB2201A70969F007921E4 /* TableViewController.m in Sources */,

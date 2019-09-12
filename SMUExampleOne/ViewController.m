@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ColorLabel;
+@property (weak, nonatomic) IBOutlet UIButton *inputZipButton;
+@property (weak, nonatomic) IBOutlet UIButton *jumpToWebButton;
 
 - (IBAction)JumpToWeb:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIStepper *monthSteper;
@@ -133,7 +135,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     //------------------auto size a UIScrollView to fit its content--------------------------
-
+    self.jumpToWebButton.hidden = true;
     [self.scrollView addSubview:self.imageView];
     CGRect contentRect = CGRectZero;
     for (UIView *view in self.scrollView.subviews) {
@@ -201,7 +203,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 //    NSLog(@"in outer part of segue");
-    BOOL isVC = [[segue destinationViewController] isKindOfClass:[UIViewController class]];
+    BOOL isVC = [[segue destinationViewController] isKindOfClass:[moreDetailsControllerViewController class]];
     if(isVC){
         moreDetailsControllerViewController *vc = [segue destinationViewController];
 //        NSLog(@"in segue");

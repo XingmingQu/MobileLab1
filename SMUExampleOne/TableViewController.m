@@ -57,7 +57,7 @@
 -(NSArray*)TitleNames{
     
     if(!_TitleNames)
-        _TitleNames = @[@"Car Galary",@"Find You Favourite Cars",@"See Your Estimated Monthly Payment", @"View Car Brands and History"];
+        _TitleNames = @[@"Car Gallery",@"Find Your Favourite Cars",@"See Your Estimated Monthly Payment", @"View Car Brands and History"];
     
     return _TitleNames;
 }

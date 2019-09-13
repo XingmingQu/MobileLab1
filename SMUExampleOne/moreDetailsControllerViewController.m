@@ -39,7 +39,7 @@
     _imageView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     //-------------set segmentScrollView parameters---------
     [self.segmentScrollView addSubview:self.imageView];
-    self.segmentScrollView.contentSize= self.imageView.image.size;
+    self.segmentScrollView.contentSize= self.imageView.frame.size;
     self.segmentScrollView.minimumZoomScale = 0.1;
     self.segmentScrollView.maximumZoomScale = 4;
     self.segmentScrollView.delegate = self;

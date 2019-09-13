@@ -71,7 +71,7 @@
 		825969AF23299E7300BBC02D /* civicS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = civicS.txt; sourceTree = "<group>"; };
 		82FE23282329F1130075F776 /* popUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = popUpViewController.h; sourceTree = "<group>"; };
 		82FE23292329F1130075F776 /* popUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = popUpViewController.m; sourceTree = "<group>"; };
-		B63FB1F21A709147007921E4 /* SMUExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMUExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63FB1F21A709147007921E4 /* labOneCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labOneCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB1F61A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB1F71A709147007921E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B63FB1F91A709147007921E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		B63FB2001A709147007921E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B63FB2021A709147007921E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B63FB2051A709147007921E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B63FB20B1A709147007921E4 /* SMUExampleOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMUExampleOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63FB20B1A709147007921E4 /* labOneCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = labOneCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63FB2101A709147007921E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63FB2111A709147007921E4 /* SMUExampleOneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMUExampleOneTests.m; sourceTree = "<group>"; };
 		B63FB21B1A7091A6007921E4 /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 		B63FB1F31A709147007921E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B63FB1F21A709147007921E4 /* SMUExampleOne.app */,
-				B63FB20B1A709147007921E4 /* SMUExampleOneTests.xctest */,
+				B63FB1F21A709147007921E4 /* labOneCode.app */,
+				B63FB20B1A709147007921E4 /* labOneCodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,9 +211,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B63FB1F11A709147007921E4 /* SMUExampleOne */ = {
+		B63FB1F11A709147007921E4 /* labOneCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B63FB2151A709147007921E4 /* Build configuration list for PBXNativeTarget "SMUExampleOne" */;
+			buildConfigurationList = B63FB2151A709147007921E4 /* Build configuration list for PBXNativeTarget "labOneCode" */;
 			buildPhases = (
 				B63FB1EE1A709147007921E4 /* Sources */,
 				B63FB1EF1A709147007921E4 /* Frameworks */,
@@ -223,14 +223,14 @@
 			);
 			dependencies = (
 			);
-			name = SMUExampleOne;
+			name = labOneCode;
 			productName = SMUExampleOne;
-			productReference = B63FB1F21A709147007921E4 /* SMUExampleOne.app */;
+			productReference = B63FB1F21A709147007921E4 /* labOneCode.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B63FB20A1A709147007921E4 /* SMUExampleOneTests */ = {
+		B63FB20A1A709147007921E4 /* labOneCodeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B63FB2181A709147007921E4 /* Build configuration list for PBXNativeTarget "SMUExampleOneTests" */;
+			buildConfigurationList = B63FB2181A709147007921E4 /* Build configuration list for PBXNativeTarget "labOneCodeTests" */;
 			buildPhases = (
 				B63FB2071A709147007921E4 /* Sources */,
 				B63FB2081A709147007921E4 /* Frameworks */,
@@ -241,9 +241,9 @@
 			dependencies = (
 				B63FB20D1A709147007921E4 /* PBXTargetDependency */,
 			);
-			name = SMUExampleOneTests;
+			name = labOneCodeTests;
 			productName = SMUExampleOneTests;
-			productReference = B63FB20B1A709147007921E4 /* SMUExampleOneTests.xctest */;
+			productReference = B63FB20B1A709147007921E4 /* labOneCodeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +265,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B63FB1ED1A709147007921E4 /* Build configuration list for PBXProject "SMUExampleOne" */;
+			buildConfigurationList = B63FB1ED1A709147007921E4 /* Build configuration list for PBXProject "labOneCode" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,8 +279,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B63FB1F11A709147007921E4 /* SMUExampleOne */,
-				B63FB20A1A709147007921E4 /* SMUExampleOneTests */,
+				B63FB1F11A709147007921E4 /* labOneCode */,
+				B63FB20A1A709147007921E4 /* labOneCodeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,7 +350,7 @@
 /* Begin PBXTargetDependency section */
 		B63FB20D1A709147007921E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B63FB1F11A709147007921E4 /* SMUExampleOne */;
+			target = B63FB1F11A709147007921E4 /* labOneCode */;
 			targetProxy = B63FB20C1A709147007921E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -500,7 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SMU.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMUExampleOne.app/SMUExampleOne";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/labOneCode.app/labOneCode";
 			};
 			name = Debug;
 		};
@@ -516,14 +516,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SMU.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMUExampleOne.app/SMUExampleOne";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/labOneCode.app/labOneCode";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B63FB1ED1A709147007921E4 /* Build configuration list for PBXProject "SMUExampleOne" */ = {
+		B63FB1ED1A709147007921E4 /* Build configuration list for PBXProject "labOneCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B63FB2131A709147007921E4 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B63FB2151A709147007921E4 /* Build configuration list for PBXNativeTarget "SMUExampleOne" */ = {
+		B63FB2151A709147007921E4 /* Build configuration list for PBXNativeTarget "labOneCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B63FB2161A709147007921E4 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B63FB2181A709147007921E4 /* Build configuration list for PBXNativeTarget "SMUExampleOneTests" */ = {
+		B63FB2181A709147007921E4 /* Build configuration list for PBXNativeTarget "labOneCodeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B63FB2191A709147007921E4 /* Debug */,

@@ -344,6 +344,9 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="323" id="ldh-Rt-6Vs"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -379,6 +382,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-pj-4Oy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Car Brand and its History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAH-Dm-y5k">
                                 <rect key="frame" x="27" y="387" width="321" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -424,9 +430,11 @@
                             <constraint firstAttribute="trailing" secondItem="hzK-0n-xmq" secondAttribute="trailing" constant="13" id="1nG-eB-E0H"/>
                             <constraint firstAttribute="trailing" secondItem="jAH-Dm-y5k" secondAttribute="trailing" constant="27" id="2Tb-Mc-w3C"/>
                             <constraint firstAttribute="trailing" secondItem="o3F-zP-GWB" secondAttribute="trailing" constant="4" id="BBr-d0-9Ql"/>
+                            <constraint firstAttribute="trailing" secondItem="ezw-pj-4Oy" secondAttribute="trailing" id="Bhv-uF-s1M"/>
                             <constraint firstItem="jAH-Dm-y5k" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="27" id="FnS-T8-JtX"/>
                             <constraint firstItem="jAH-Dm-y5k" firstAttribute="top" secondItem="Qot-Ot-Jpt" secondAttribute="bottom" constant="15" id="J8W-RD-Zl5"/>
                             <constraint firstItem="o3F-zP-GWB" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="4" id="K7w-bm-Dml"/>
+                            <constraint firstAttribute="bottom" secondItem="ezw-pj-4Oy" secondAttribute="bottom" id="Ktn-bT-595"/>
                             <constraint firstAttribute="trailing" secondItem="Qot-Ot-Jpt" secondAttribute="trailing" constant="4" id="LDE-vU-s8C"/>
                             <constraint firstItem="hzK-0n-xmq" firstAttribute="top" secondItem="o3F-zP-GWB" secondAttribute="bottom" constant="8" id="NoM-ex-kom"/>
                             <constraint firstItem="hzK-0n-xmq" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="168" id="QvI-Bw-xOm"/>
@@ -436,7 +444,9 @@
                             <constraint firstItem="o3F-zP-GWB" firstAttribute="top" secondItem="jAH-Dm-y5k" secondAttribute="bottom" constant="7.5" id="bVb-IN-rJt"/>
                             <constraint firstItem="hzK-0n-xmq" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="479" id="dFA-kQ-PJU"/>
                             <constraint firstItem="Qot-Ot-Jpt" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" constant="4" id="eIs-5u-UkS"/>
+                            <constraint firstItem="ezw-pj-4Oy" firstAttribute="leading" secondItem="vVR-0y-WyN" secondAttribute="leading" id="ecz-8x-qQF"/>
                             <constraint firstItem="zPl-iE-r6H" firstAttribute="top" secondItem="hzK-0n-xmq" secondAttribute="bottom" constant="3" id="nZh-Lq-fUt"/>
+                            <constraint firstItem="ezw-pj-4Oy" firstAttribute="top" secondItem="vVR-0y-WyN" secondAttribute="top" id="nwZ-uW-Cyo"/>
                             <constraint firstItem="Qot-Ot-Jpt" firstAttribute="top" secondItem="KMq-2C-w2x" secondAttribute="bottom" constant="5" id="pJG-4M-ECF"/>
                         </constraints>
                     </view>
@@ -444,8 +454,9 @@
                         <outlet property="DarkModelLabel" destination="dr4-TN-75d" id="nFA-xr-Ruz"/>
                         <outlet property="SwitchButton" destination="SK8-c6-ZKg" id="2s7-KI-eP8"/>
                         <outlet property="brandPicker" destination="o3F-zP-GWB" id="Yaj-So-IUS"/>
+                        <outlet property="brandScrollView" destination="ezw-pj-4Oy" id="36L-8n-rqW"/>
                         <outlet property="brandView" destination="KMq-2C-w2x" id="Xlw-Pf-qrg"/>
-                        <outlet property="historyText" destination="Qot-Ot-Jpt" id="JEc-Tj-ecT"/>
+                        <outlet property="historyText" destination="Qot-Ot-Jpt" id="fOe-Ax-mWt"/>
                         <outlet property="titleLabel" destination="jAH-Dm-y5k" id="oxH-81-FyR"/>
                     </connections>
                 </viewController>

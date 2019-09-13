@@ -36,15 +36,18 @@
     //    _imageView = [[UIImageView alloc] initWithImage:[[ImageModel sharedInstance] getImageWithName:self.imageName]];
     _imageView = [[UIImageView alloc] initWithImage:self.image];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _imageView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+//    _imageView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+    _imageView.frame = CGRectMake(0, 0, self.segmentScrollView.frame.size.width, UIScreen.mainScreen.bounds.size.height*2);
+
     //-------------set segmentScrollView parameters---------
     [self.segmentScrollView addSubview:self.imageView];
     self.segmentScrollView.contentSize= self.imageView.frame.size;
     self.segmentScrollView.minimumZoomScale = 0.1;
     self.segmentScrollView.maximumZoomScale = 4;
     self.segmentScrollView.delegate = self;
-    //------------------------------------------------------
     
+    
+    //------------------------------------------------------
     //-------create the view for segmented control----------------
     
     _detailsView = [[UITextView alloc] init];
@@ -54,6 +57,10 @@
     
     // Do any additional setup after loading the view.
 }
+
+//-(void)scrollViewDidScroll:(UIScrollView *)sender{
+////    sender.contentOffset.x = 0.0
+//}
 
 - (IBAction)indexChanged:(UISegmentedControl *)sender {
     

@@ -10,8 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BrandAndPickerViewController : UIViewController
+@interface BrandAndPickerViewController : UIViewController {
+    
+      IBOutlet UIScrollView *brandScrollView;
+//      IBOutlet UITextView *historyText;
+//      IBOutlet UIImageView *brandView;
+//      IBOutlet UISwitch *SwitchButton;
+//      IBOutlet UILabel *DarkModelLabel;
+//      IBOutlet UILabel *titleLabel;
+//      IBOutlet UIPickerView *brandPicker;
+}
 //@property (strong,nonatomic) NSDictionary* BrandNameToIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END

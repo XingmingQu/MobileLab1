@@ -36,6 +36,20 @@ NSArray *pickerData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    brandScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+// subview that can be scroll at different direction
+//    [self.view addSubview:brandScrollView];
+    
+    [brandScrollView addSubview:_historyText];
+    [brandScrollView addSubview:_brandView];
+    [brandScrollView addSubview:_SwitchButton];
+    [brandScrollView addSubview:_DarkModelLabel];
+    [brandScrollView addSubview:_titleLabel];
+    [brandScrollView addSubview:_brandPicker];
+    
+    
+    
     // Do any additional setup after loading the view.
     //    _historyText.text = @"HisroryHisroryHisroryHisroryHisrory";
     

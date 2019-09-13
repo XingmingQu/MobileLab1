@@ -75,6 +75,9 @@
             self.specsTextView.hidden = false;
             [self.imageView setHidden:YES];
             [self.detailsView setHidden:NO];
+//            [self.specsTextView setContentOffset:CGPointMake(0, 0) animated:YES];
+//            self.segmentScrollView.scrollsToTop = true;
+            [self.segmentScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
             break;
         default:
             

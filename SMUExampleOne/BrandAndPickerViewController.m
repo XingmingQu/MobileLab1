@@ -23,6 +23,7 @@ NSArray *pickerData;
 @property (weak, nonatomic) IBOutlet UIPickerView *brandPicker;
 
 
+
 @property (strong,nonatomic) BrandsAndHistory* myBrandHistory;
 
 
@@ -37,7 +38,9 @@ NSArray *pickerData;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    brandScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    brandScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(343, 595, self.view.frame.size.width, self.view.frame.size.height)];
+
+    [brandScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*2)];
 // subview that can be scroll at different direction
 //    [self.view addSubview:brandScrollView];
     
@@ -47,7 +50,8 @@ NSArray *pickerData;
     [brandScrollView addSubview:_DarkModelLabel];
     [brandScrollView addSubview:_titleLabel];
     [brandScrollView addSubview:_brandPicker];
-    
+    [brandScrollView addSubview:stackView];
+    [brandScrollView addSubview:darkModelStackView];
     
     
     // Do any additional setup after loading the view.

@@ -25,34 +25,53 @@ NSArray *pickerData;
 
 
 @property (strong,nonatomic) BrandsAndHistory* myBrandHistory;
+@property (weak, nonatomic) IBOutlet UITextView *testTextVIew;
 
+@property (weak, nonatomic) IBOutlet UILabel *text_history_label;
 
 @end
 
 @implementation BrandAndPickerViewController
+@synthesize historyText;
+@synthesize brandView;
+@synthesize SwitchButton;
+@synthesize DarkModelLabel;
+@synthesize titleLabel;
+@synthesize brandPicker;
 
-
-
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+    [self.view setNeedsDisplay];
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    brandScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(343, 595, self.view.frame.size.width, self.view.frame.size.height)];
-
-    [brandScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*2)];
-// subview that can be scroll at different direction
-//    [self.view addSubview:brandScrollView];
-    
-    [brandScrollView addSubview:_historyText];
-    [brandScrollView addSubview:_brandView];
-    [brandScrollView addSubview:_SwitchButton];
-    [brandScrollView addSubview:_DarkModelLabel];
-    [brandScrollView addSubview:_titleLabel];
-    [brandScrollView addSubview:_brandPicker];
     [brandScrollView addSubview:stackView];
-    [brandScrollView addSubview:darkModelStackView];
-    
+//    [stackView addSubview:historyText];
+    [stackView addSubview:titleLabel];
+    [stackView addSubview:brandPicker];
+    [stackView addSubview:darkModelStackView];
+    [darkModelStackView addSubview:DarkModelLabel];
+    [darkModelStackView addSubview:SwitchButton];
+//    historyText settop
+//    historyText.text = @"history";
+//    historyText.isScrollEnabled = false;
+//    _testTextVIew.isScrollEnabled=false;
+//    [stackView addSubview:_testTextVIew];
+    _text_history_label.text =  [BrandsAndHistory sharedInstance].BrandHistory[0];
+
+    brandScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*2)];
+//    [brandScrollView setContentOffset:CGPointMake(0, -200) animated:YES];
+//    brandScrollView.scrollsToTop = true;
+//    stackView=[[UIStackView alloc] initWithFrame:CGRectMake(0, 0,self.view.frame.size.width,self.view.frame.size.height)];
+//
+//    [brandScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*2)];
+// subview that can be scroll at different direction
+
+
     
     // Do any additional setup after loading the view.
     //    _historyText.text = @"HisroryHisroryHisroryHisroryHisrory";
@@ -68,22 +87,22 @@ NSArray *pickerData;
 - (IBAction)SwitchChanged:(UISwitch *)sender {
     if (sender.on) {
         self.view.backgroundColor = [UIColor lightGrayColor];
-        _historyText.backgroundColor = [UIColor lightGrayColor];
-        _brandView.backgroundColor =[UIColor lightGrayColor];
-        _brandPicker.backgroundColor = [UIColor lightGrayColor];
+        historyText.backgroundColor = [UIColor lightGrayColor];
+        brandView.backgroundColor =[UIColor lightGrayColor];
+        brandPicker.backgroundColor = [UIColor lightGrayColor];
         
-        _DarkModelLabel.textColor = [UIColor whiteColor];
-        _historyText.textColor = [UIColor whiteColor];
-        _titleLabel.textColor = [UIColor whiteColor];
+        DarkModelLabel.textColor = [UIColor whiteColor];
+        historyText.textColor = [UIColor whiteColor];
+        titleLabel.textColor = [UIColor whiteColor];
     }else{
         self.view.backgroundColor = [UIColor whiteColor];
-        _historyText.backgroundColor =[UIColor whiteColor];
-        _brandView.backgroundColor =[UIColor whiteColor];
-        _brandPicker.backgroundColor = [UIColor colorWithRed:235.0f/255 green:252.0f/255 blue:255.0f/255 alpha:1];
+        historyText.backgroundColor =[UIColor whiteColor];
+        brandView.backgroundColor =[UIColor whiteColor];
+        brandPicker.backgroundColor = [UIColor colorWithRed:235.0f/255 green:252.0f/255 blue:255.0f/255 alpha:1];
         
-        _DarkModelLabel.textColor = [UIColor blackColor];
-        _historyText.textColor = [UIColor blackColor];
-        _titleLabel.textColor = [UIColor blackColor];
+        DarkModelLabel.textColor = [UIColor blackColor];
+        historyText.textColor = [UIColor blackColor];
+        titleLabel.textColor = [UIColor blackColor];
     }
 }
 
@@ -104,9 +123,10 @@ NSArray *pickerData;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    [self.historyText setContentOffset:CGPointMake(0, 0) animated:YES];
-    self.historyText.text = [BrandsAndHistory sharedInstance].BrandHistory[row];
-    [self.historyText setContentOffset:CGPointMake(0, 0) animated:YES];
+//    [self.historyText setContentOffset:CGPointMake(0, 0) animated:YES];
+//    self.historyText.text = [BrandsAndHistory sharedInstance].BrandHistory[row];
+//    [self.historyText setContentOffset:CGPointMake(0, 0) animated:YES];
+    _text_history_label.text =  [BrandsAndHistory sharedInstance].BrandHistory[row];
 
     NSString *logoImageName = [BrandsAndHistory sharedInstance].BrandNames[row];
     logoImageName = [logoImageName stringByAppendingString:@"_ic"];
@@ -115,6 +135,7 @@ NSArray *pickerData;
     UIImage* image = nil;
     image = [UIImage imageNamed:logoImageName];
     self.brandView.image = image;
+//    [brandScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 
 //    self.historyText.scrollsToTop = true;
 //    [[UIImageView alloc] initWithImage:image];

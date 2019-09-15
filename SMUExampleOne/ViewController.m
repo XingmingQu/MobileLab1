@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *allPageScrollView;
+@property (weak, nonatomic) IBOutlet UIStackView *allStackView;
 
 @property (weak, nonatomic) IBOutlet UILabel *modelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *MakeLabel;
@@ -153,6 +155,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    [_allPageScrollView addSubview:_allStackView];
+    [_allStackView addSubview:_APRslider];
+//    [_allStackView setUserInteractionEnabled:YES];
+
+//    [_allStackView addSubview:_scrollView];
+//    [_allStackView addsubview:_APRslider];
+    
     //------------------auto size a UIScrollView to fit its content--------------------------
     self.jumpToWebButton.hidden = true;
     [self.scrollView addSubview:self.imageView];

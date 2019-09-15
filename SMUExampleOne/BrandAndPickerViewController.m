@@ -56,11 +56,7 @@ NSArray *pickerData;
     [stackView addSubview:darkModelStackView];
     [darkModelStackView addSubview:DarkModelLabel];
     [darkModelStackView addSubview:SwitchButton];
-//    historyText settop
-//    historyText.text = @"history";
-//    historyText.isScrollEnabled = false;
-//    _testTextVIew.isScrollEnabled=false;
-//    [stackView addSubview:_testTextVIew];
+
     _text_history_label.text =  [BrandsAndHistory sharedInstance].BrandHistory[0];
 
     brandScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*2)];

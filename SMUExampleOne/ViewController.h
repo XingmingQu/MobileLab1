@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *imageIndex;
 @property (strong, nonatomic) NSString *zipCode;
+
 @end
 

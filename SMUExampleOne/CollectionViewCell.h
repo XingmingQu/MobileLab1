@@ -10,5 +10,7 @@
 
 @interface CollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *passButton;
+@property (weak, nonatomic) IBOutlet UILabel *colorCell;
 
 @end

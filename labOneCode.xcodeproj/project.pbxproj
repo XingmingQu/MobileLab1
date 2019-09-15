@@ -22,6 +22,7 @@
 		8235CDE523272EF10005E07B /* AudiHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDDF23272EF00005E07B /* AudiHistory.txt */; };
 		8235CDE623272EF10005E07B /* BMWHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE023272EF00005E07B /* BMWHistory.txt */; };
 		8235CDE723272EF10005E07B /* FordHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8235CDE123272EF10005E07B /* FordHistory.txt */; };
+		82452DEC232E56CE0096E431 /* collectionViewPopUpModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82452DEB232E56CE0096E431 /* collectionViewPopUpModelViewController.m */; };
 		825969AE23298E5500BBC02D /* moreDetailsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */; };
 		825969B023299E7300BBC02D /* civicS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 825969AF23299E7300BBC02D /* civicS.txt */; };
 		82FE232A2329F1130075F776 /* popUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE23292329F1130075F776 /* popUpViewController.m */; };
@@ -66,6 +67,8 @@
 		8235CDDF23272EF00005E07B /* AudiHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudiHistory.txt; sourceTree = "<group>"; };
 		8235CDE023272EF00005E07B /* BMWHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BMWHistory.txt; sourceTree = "<group>"; };
 		8235CDE123272EF10005E07B /* FordHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FordHistory.txt; sourceTree = "<group>"; };
+		82452DEA232E56CE0096E431 /* collectionViewPopUpModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = collectionViewPopUpModelViewController.h; sourceTree = "<group>"; };
+		82452DEB232E56CE0096E431 /* collectionViewPopUpModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collectionViewPopUpModelViewController.m; sourceTree = "<group>"; };
 		825969AC23298E5500BBC02D /* moreDetailsControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moreDetailsControllerViewController.h; sourceTree = "<group>"; };
 		825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moreDetailsControllerViewController.m; sourceTree = "<group>"; };
 		825969AF23299E7300BBC02D /* civicS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = civicS.txt; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 		B63FB1F41A709147007921E4 /* SMUExampleOne */ = {
 			isa = PBXGroup;
 			children = (
+				82452DEA232E56CE0096E431 /* collectionViewPopUpModelViewController.h */,
+				82452DEB232E56CE0096E431 /* collectionViewPopUpModelViewController.m */,
 				825969AC23298E5500BBC02D /* moreDetailsControllerViewController.h */,
 				825969AD23298E5500BBC02D /* moreDetailsControllerViewController.m */,
 				B63FB1F91A709147007921E4 /* AppDelegate.h */,
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B63FB1FE1A709147007921E4 /* ViewController.m in Sources */,
+				82452DEC232E56CE0096E431 /* collectionViewPopUpModelViewController.m in Sources */,
 				8235CDCA2326D5DF0005E07B /* BrandAndPickerViewController.m in Sources */,
 				825969AE23298E5500BBC02D /* moreDetailsControllerViewController.m in Sources */,
 				B63FB1FB1A709147007921E4 /* AppDelegate.m in Sources */,

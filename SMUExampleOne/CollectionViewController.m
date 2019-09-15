@@ -9,8 +9,10 @@
 #import "CollectionViewController.h"
 #import "ImageModel.h"
 #import "CollectionViewCell.h"
-
+#import "collectionViewPopUpModelViewController.h"
 @interface CollectionViewController ()
+
+
 
 
 @property (strong,nonatomic) ImageModel* myImageModel;
@@ -18,6 +20,15 @@
 @end
 
 @implementation CollectionViewController
+- (IBAction)goToPopUp:(UIButton*)sender {
+//    collectionPopUp
+    collectionViewPopUpModelViewController *popUpVC = [self.storyboard instantiateViewControllerWithIdentifier:@"collectionPopUp"];
+//    NSLog(@"%@",sender.titleLabel.text);
+
+    popUpVC.imageIndex = sender.titleLabel.text;
+    [self presentViewController:popUpVC animated:YES completion:nil];
+    
+}
 
 -(ImageModel*)myImageModel{
     
@@ -31,7 +42,7 @@ static NSString * const reuseIdentifier = @"ImageCollectCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -76,6 +87,17 @@ static NSString * const reuseIdentifier = @"ImageCollectCell";
     // Configure the cell
     cell.backgroundColor = [UIColor blueColor];
     cell.imageView.image = [self.myImageModel getImageWithName:self.myImageModel.CollectionimageNames[indexPath.row]];
+    
+    [cell.passButton setTitle:[NSString stringWithFormat:@"%ld", (long)indexPath.row] forState:(UIControlStateNormal)];
+    cell.userInteractionEnabled = true;
+//    _labelForPassingIndex.text = [NSString stringWithFormat:@"%d", indexPath.row];
+//    collectionViewPopUpModelViewController *popUpVC;
+//    popUpVC identi
+//    popUpVC.imageIndex = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    CGFloat red = (CGFloat)random()/(CGFloat)RAND_MAX;
+    CGFloat green = (CGFloat)random()/(CGFloat)RAND_MAX;
+    CGFloat blue = (CGFloat)random()/(CGFloat)RAND_MAX;
+    [cell.colorCell setTextColor:[UIColor colorWithRed:red green:green blue:blue alpha:1]];
     
     return cell;
 }

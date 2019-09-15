@@ -111,7 +111,7 @@
         
         // Configure the cell...
         cell.textLabel.text = @"Car Photos Collection";
-//        cell.detailTextLabel.text = @"See a collection of cars";
+        cell.detailTextLabel.text = @"Click images inside to view detail";
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"PickerCell" forIndexPath:indexPath];
         
